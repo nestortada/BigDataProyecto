@@ -3,3 +3,6 @@ prefect
 pyarrow
 python-dotenv
 sodapy
+psycopg2-binary
+jupyter
+ipykernel
