@@ -1,4 +1,5 @@
 pandas
+prefect
 pyarrow
 python-dotenv
 sodapy
