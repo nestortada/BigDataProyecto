@@ -2,29 +2,38 @@ from functools import wraps
 from io import StringIO
 from pathlib import Path
 import inspect
+import os
 import re
 import time
 import unicodedata
 
 import pandas as pd
 import psycopg2
+from dotenv import load_dotenv
 from prefect import flow, task
 from prefect.logging import get_run_logger
 
 
-PROJECT_ROOT = Path.cwd().resolve()
-if PROJECT_ROOT.name == "Operationalization":
-    PROJECT_ROOT = PROJECT_ROOT.parents[1]
+def find_project_root(start: Path) -> Path:
+    candidates = [start, *start.parents]
+    for candidate in candidates:
+        if (candidate / ".env").exists() and (candidate / "Data").exists() and (candidate / "Code").exists():
+            return candidate
+    return start
+
+
+PROJECT_ROOT = find_project_root(Path.cwd())
+load_dotenv(PROJECT_ROOT / ".env")
 
 PARQUET_FILE = PROJECT_ROOT / "Data" / "Raw" / "secop_procesos.parquet"
 TABLE_NAME = "secop_procesos"
 
 DB_CONFIG = {
-    "host": "localhost",
-    "port": 5433,
-    "database": "bigdatatools1",
-    "user": "psqluser",
-    "password": "psqlpass",
+    "host": os.getenv("POSTGRES_HOST", "localhost"),
+    "port": int(os.getenv("POSTGRES_PORT", "5433")),
+    "database": os.getenv("POSTGRES_DB", "bigdatatools1"),
+    "user": os.getenv("POSTGRES_USER", "psqluser"),
+    "password": os.getenv("POSTGRES_PASSWORD", "psqlpass"),
 }
 
 

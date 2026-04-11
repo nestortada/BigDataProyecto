@@ -1,16 +1,14 @@
-version: "3.9"
-
 services:
   postgres:
     image: postgres:16
     container_name: docker_postgres
     restart: unless-stopped
     environment:
-      POSTGRES_USER: psqluser
-      POSTGRES_PASSWORD: psqlpass
-      POSTGRES_DB: bigdatatools1
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
     ports:
-      - "5433:5432"
+      - "${POSTGRES_PORT}:5432"
     volumes:
       - pg_data:/var/lib/postgresql/data
 
