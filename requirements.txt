@@ -1,6 +1,10 @@
+numpy
 pandas
 prefect
 pyarrow
+scipy
+matplotlib
+seaborn
 python-dotenv
 sodapy
 psycopg2-binary

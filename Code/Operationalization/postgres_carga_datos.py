@@ -29,11 +29,11 @@ PARQUET_FILE = PROJECT_ROOT / "Data" / "Raw" / "secop_procesos.parquet"
 TABLE_NAME = "secop_procesos"
 
 DB_CONFIG = {
-    "host": os.getenv("POSTGRES_HOST", "localhost"),
-    "port": int(os.getenv("POSTGRES_PORT", "5433")),
-    "database": os.getenv("POSTGRES_DB", "bigdatatools1"),
-    "user": os.getenv("POSTGRES_USER", "psqluser"),
-    "password": os.getenv("POSTGRES_PASSWORD", "psqlpass"),
+    "host": os.getenv("POSTGRES_HOST"),
+    "port": int(os.getenv("POSTGRES_PORT")),
+    "database": os.getenv("POSTGRES_DB"),
+    "user": os.getenv("POSTGRES_USER"),
+    "password": os.getenv("POSTGRES_PASSWORD"),
 }
 
 
