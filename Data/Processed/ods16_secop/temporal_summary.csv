@@ -1,0 +1,10 @@
+﻿column,dtype,non_null_count,null_count,min,max,mean,median
+fecha_de_publicacion,datetime,6219,443781,2021-04-12T00:00:00+00:00,2022-01-07T00:00:00+00:00,,
+fecha_de_publicacion_del,datetime,450000,0,2021-04-12T00:00:00+00:00,2022-01-07T00:00:00+00:00,,
+fecha_de_ultima_publicaci,datetime,450000,0,2021-04-12T00:00:00+00:00,2022-01-07T00:00:00+00:00,,
+fecha_de_recepcion_de,datetime,114686,335314,2021-03-15T00:00:00+00:00,2023-07-21T00:00:00+00:00,,
+fecha_de_apertura_de_respuesta,datetime,92818,357182,2021-04-13T00:00:00+00:00,2023-07-22T00:00:00+00:00,,
+fecha_de_apertura_efectiva,datetime,104237,345763,2021-04-12T00:00:00+00:00,2023-02-22T00:00:00+00:00,,
+dias_hasta_recepcion,float64,6219,443781,1.0,183.0,10.079755587715066,9.0
+dias_hasta_apertura,float64,6219,443781,1.0,183.0,10.109342337996463,9.0
+duracion_proceso_si_aplica,float64,6219,443781,1.0,48.0,9.845473548802058,9.0

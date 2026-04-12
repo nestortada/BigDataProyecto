@@ -1,0 +1,3 @@
+﻿column,non_null_count,null_count,empty_or_blank_pct,short_text_pct,mean_length,median_length,p95_length,max_length
+nombre_del_procedimiento,450000,0,0.0,0.8482,86.8453,50.0,200.0,200
+descripci_n_del_procedimiento,450000,0,0.0,0.0358,239.5275,224.0,481.0,500

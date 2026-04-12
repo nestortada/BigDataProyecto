@@ -1,0 +1,62 @@
+{
+  "datetime": [
+    "fecha_de_apertura_de_respuesta",
+    "fecha_de_apertura_efectiva",
+    "fecha_de_publicacion",
+    "fecha_de_publicacion_del",
+    "fecha_de_recepcion_de",
+    "fecha_de_ultima_publicaci"
+  ],
+  "numeric": [
+    "conteo_de_respuestas_a_ofertas",
+    "duracion",
+    "numero_de_lotes",
+    "precio_base",
+    "proveedores_con_invitacion",
+    "proveedores_invitados",
+    "proveedores_que_manifestaron",
+    "proveedores_unicos_con",
+    "respuestas_al_procedimiento",
+    "respuestas_externas",
+    "visualizaciones_del"
+  ],
+  "text": [
+    "descripci_n_del_procedimiento",
+    "nombre_del_procedimiento"
+  ],
+  "categorical": [
+    "categorias_adicionales",
+    "ciudad_de_la_unidad_de",
+    "ciudad_entidad",
+    "codigo_entidad",
+    "codigo_pci",
+    "codigo_principal_de_categoria",
+    "departamento_entidad",
+    "entidad",
+    "estado_de_apertura_del_proceso",
+    "estado_del_procedimiento",
+    "estado_resumen",
+    "fase",
+    "fecha_adjudicacion",
+    "fecha_de_publicacion_fase",
+    "fecha_de_publicacion_fase_2",
+    "fecha_de_publicacion_fase_3",
+    "id_del_portafolio",
+    "id_estado_del_procedimiento",
+    "justificaci_n_modalidad_de",
+    "modalidad_de_contratacion",
+    "nit_entidad",
+    "nombre_de_la_unidad_de",
+    "ordenentidad",
+    "ppi",
+    "subtipo_de_contrato",
+    "tipo_de_contrato",
+    "unidad_de_duracion"
+  ],
+  "technical": [
+    "id_del_proceso",
+    "referencia_del_proceso",
+    "url",
+    "urlproceso"
+  ]
+}

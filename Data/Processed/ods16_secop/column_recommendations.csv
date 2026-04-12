@@ -1,0 +1,51 @@
+﻿column,null_pct,dominant_share_pct,recommendation_count,recommendations
+fecha_de_publicacion_fase,99.9998,99.9998,2,high_nulls | near_constant
+fecha_de_publicacion,98.618,98.618,2,high_nulls | near_constant
+fecha_de_publicacion_fase_2,96.724,96.724,2,high_nulls | near_constant
+fecha_de_apertura_efectiva,76.8362,76.8362,2,high_nulls | potential_leakage
+fecha_adjudicacion,84.9298,84.9298,1,high_nulls
+fecha_de_apertura_de_respuesta,79.3738,79.3738,1,high_nulls
+fecha_de_recepcion_de,74.5142,74.5142,1,high_nulls
+proveedores_que_manifestaron,0.0,100.0,1,near_constant
+subtipo_de_contrato,0.0,100.0,1,near_constant
+respuestas_externas,0.0,99.5384,1,near_constant
+conteo_de_respuestas_a_ofertas,0.0,99.1716,1,near_constant
+proveedores_con_invitacion,0.0,95.8936,1,near_constant
+numero_de_lotes,0.0,95.2064,1,near_constant
+estado_del_procedimiento,0.0,83.0869,1,potential_leakage
+id_estado_del_procedimiento,0.0,81.564,1,potential_leakage
+estado_de_apertura_del_proceso,0.0,79.3738,1,potential_leakage
+estado_resumen,0.0,42.6833,1,potential_leakage
+fecha_de_ultima_publicaci,0.0,1.1104,1,potential_leakage
+id_del_proceso,0.0,0.1076,1,primary_identifier
+referencia_del_proceso,0.0,0.1076,1,non_unique_reference_identifier
+fecha_de_publicacion_fase_3,4.6582,4.6582,0,ok
+fase,0.0111,51.4631,0,ok
+proveedores_invitados,0.0,93.2084,0,ok
+proveedores_unicos_con,0.0,81.994,0,ok
+respuestas_al_procedimiento,0.0,81.6529,0,ok
+categorias_adicionales,0.0,81.1453,0,ok
+codigo_pci,0.0,79.1804,0,ok
+visualizaciones_del,0.0,74.6476,0,ok
+tipo_de_contrato,0.0,70.1267,0,ok
+modalidad_de_contratacion,0.0,62.9698,0,ok
+ordenentidad,0.0,61.6176,0,ok
+unidad_de_duracion,0.0,61.1924,0,ok
+justificaci_n_modalidad_de,0.0,58.3136,0,ok
+departamento_entidad,0.0,35.3122,0,ok
+ciudad_de_la_unidad_de,0.0,29.0607,0,ok
+codigo_principal_de_categoria,0.0,26.0358,0,ok
+ciudad_entidad,0.0,22.1707,0,ok
+duracion,0.0,6.1613,0,ok
+precio_base,0.0,4.41,0,ok
+nit_entidad,0.0,3.8236,0,ok
+nombre_del_procedimiento,0.0,2.7822,0,ok
+nombre_de_la_unidad_de,0.0,1.8404,0,ok
+codigo_entidad,0.0,1.7549,0,ok
+entidad,0.0,1.7549,0,ok
+ppi,0.0,1.7549,0,ok
+fecha_de_publicacion_del,0.0,1.1104,0,ok
+descripci_n_del_procedimiento,0.0,0.9316,0,ok
+id_del_portafolio,0.0,0.1076,0,ok
+url,0.0,0.1076,0,ok
+urlproceso,0.0,0.1076,0,ok

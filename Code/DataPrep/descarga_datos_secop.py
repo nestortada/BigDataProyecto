@@ -69,6 +69,10 @@ def validate_inputs(func):
                 if not isinstance(arg_value, int) or arg_value <= 0:
                     raise ValueError("'max_rows' debe ser None o un entero mayor que cero.")
 
+            if arg_name == "target_file_size_mb" and arg_value is not None:
+                if not isinstance(arg_value, (int, float)) or arg_value <= 0:
+                    raise ValueError("'target_file_size_mb' debe ser None o un numero mayor que cero.")
+
             if arg_name == "df":
                 if not isinstance(arg_value, pd.DataFrame):
                     raise TypeError("'df' debe ser un pandas.DataFrame.")
@@ -96,8 +100,9 @@ API_SECRET = os.getenv("SOCRATA_API_SECRET")
 DATE_FILTER_COLUMN = os.getenv("SOCRATA_DATE_FILTER_COLUMN", "fecha_de_publicacion")
 YEARS_TO_EXTRACT = int(os.getenv("SECOP_YEARS_TO_EXTRACT", "5"))
 OUTPUT_PATH = PROJECT_ROOT / "Data" / "Raw" / "secop_procesos.parquet"
-PAGE_SIZE = int(os.getenv("SECOP_PAGE_SIZE", "1000"))
-TARGET_PREVIEW_ROWS = int(os.getenv("SECOP_TARGET_PREVIEW_ROWS", "1000"))
+PAGE_SIZE = int(os.getenv("SECOP_PAGE_SIZE", "25000"))
+TARGET_PREVIEW_ROWS = int(os.getenv("SECOP_TARGET_PREVIEW_ROWS", "25000"))
+TARGET_FILE_SIZE_MB = float(os.getenv("SECOP_TARGET_FILE_SIZE_MB", "95"))
 MAX_ROWS_TO_DOWNLOAD_RAW = os.getenv("SECOP_MAX_ROWS_TO_DOWNLOAD", "")
 MAX_ROWS_TO_DOWNLOAD = int(MAX_ROWS_TO_DOWNLOAD_RAW) if MAX_ROWS_TO_DOWNLOAD_RAW.strip() else None
 
@@ -141,11 +146,13 @@ def download_dataset(
     dataset_id: str,
     app_token: str | None,
     where_clause: str,
-    page_size: int = 1000,
+    page_size: int = 25000,
     max_rows: int | None = None,
+    target_file_size_mb: float | None = None,
 ) -> pd.DataFrame:
     logger = get_run_logger()
     all_rows: list[dict[str, Any]] = []
+    target_file_size_bytes = int(target_file_size_mb * 1024 * 1024) if target_file_size_mb is not None else None
 
     def _download_with_token(token: str | None) -> list[dict[str, Any]]:
         local_rows: list[dict[str, Any]] = []
@@ -175,6 +182,20 @@ def download_dataset(
 
                 local_rows.extend(batch)
                 logger.info("Descargados %s registros acumulados.", len(local_rows))
+
+                if target_file_size_bytes is not None:
+                    estimated_size_bytes = len(pd.DataFrame.from_records(local_rows).to_parquet(index=False))
+                    logger.info(
+                        "Tamano estimado actual del parquet: %.2f MB de %.2f MB objetivo.",
+                        estimated_size_bytes / (1024 * 1024),
+                        target_file_size_bytes / (1024 * 1024),
+                    )
+                    if estimated_size_bytes >= target_file_size_bytes:
+                        logger.info(
+                            "Se alcanzo el tamano objetivo del archivo (%.2f MB). Se detiene la descarga.",
+                            target_file_size_bytes / (1024 * 1024),
+                        )
+                        break
 
                 if len(batch) < current_limit:
                     break
@@ -284,6 +305,7 @@ def main_pipeline() -> pd.DataFrame:
             where_clause=date_window["where_clause"],
             page_size=PAGE_SIZE,
             max_rows=MAX_ROWS_TO_DOWNLOAD,
+            target_file_size_mb=TARGET_FILE_SIZE_MB,
         )
         final_df = validate_and_filter_dataframe(
             raw_df,
@@ -311,6 +333,7 @@ def main() -> None:
     print(f"Secret cargada: {'si' if API_SECRET else 'no'}")
     print(f"Columna de fecha usada para filtro: {DATE_FILTER_COLUMN}")
     print(f"Ventana de extraccion: ultimos {YEARS_TO_EXTRACT} anos")
+    print(f"Tamano objetivo del archivo: {TARGET_FILE_SIZE_MB} MB")
     print("Maximo de filas configurado:", MAX_ROWS_TO_DOWNLOAD if MAX_ROWS_TO_DOWNLOAD is not None else "sin limite")
 
     df = main_pipeline()

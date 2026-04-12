@@ -1,0 +1,5 @@
+﻿duplicate_type,subset,duplicate_rows,duplicate_groups_or_keys
+exact_all_columns,all_columns,18910,
+id_del_proceso,id_del_proceso,23648,3189.0
+referencia_del_proceso,referencia_del_proceso,75688,16575.0
+id_y_referencia,"id_del_proceso, referencia_del_proceso",23648,3189.0

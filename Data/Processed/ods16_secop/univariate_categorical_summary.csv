@@ -1,0 +1,28 @@
+﻿column,non_null_count,null_count,nunique_excluding_null,top_category,top_count,top_share_pct,rare_categories_count
+id_del_portafolio,450000,0,409266,CO1.BDOS.1974907,484,0.1076,409266
+categorias_adicionales,450000,0,33746,No definido,365154,81.1453,33745
+codigo_principal_de_categoria,450000,0,8594,V1.80111600,117161,26.0358,8585
+nombre_de_la_unidad_de,450000,0,3454,SUBDIRECCION DE CONTRATACION,8282,1.8404,3449
+entidad,450000,0,1985,(Secretaría Distrital de Integración Social),7897,1.7549,1982
+ppi,450000,0,1985,702271321,7897,1.7549,1982
+codigo_entidad,450000,0,1985,702271321,7897,1.7549,1982
+nit_entidad,450000,0,1627,899999034,17206,3.8236,1619
+ciudad_de_la_unidad_de,450000,0,454,No Aplica,130773,29.0607,442
+fecha_adjudicacion,67816,382184,429,,382184,84.9298,429
+ciudad_entidad,450000,0,410,Bogotá,99768,22.1707,393
+fecha_de_publicacion_fase_3,429038,20962,272,,20962,4.6582,270
+fecha_de_publicacion_fase_2,14742,435258,258,,435258,96.724,258
+departamento_entidad,450000,0,34,Distrito Capital de Bogotá,158905,35.3122,13
+justificaci_n_modalidad_de,450000,0,32,Servicios profesionales y apoyo a la gestión,262411,58.3136,22
+tipo_de_contrato,450000,0,24,Prestación de servicios,315570,70.1267,17
+modalidad_de_contratacion,450000,0,17,Contratación directa,283364,62.9698,9
+estado_resumen,450000,0,15,Fase de ofertas,192075,42.6833,10
+fase,449950,50,13,Presentación de oferta,231584,51.4631,10
+estado_del_procedimiento,450000,0,8,Seleccionado,373891,83.0869,4
+unidad_de_duracion,450000,0,6,día(s),275366,61.1924,3
+id_estado_del_procedimiento,450000,0,5,70,367038,81.564,1
+ordenentidad,450000,0,3,Territorial,277279,61.6176,0
+estado_de_apertura_del_proceso,450000,0,2,Abierto,357182,79.3738,0
+codigo_pci,450000,0,2,Centralizada,356312,79.1804,0
+subtipo_de_contrato,450000,0,1,No Definido,450000,100.0,0
+fecha_de_publicacion_fase,1,449999,1,,449999,99.9998,1

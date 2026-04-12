@@ -1,0 +1,51 @@
+﻿column,dtype
+entidad,str
+nit_entidad,str
+departamento_entidad,str
+ciudad_entidad,str
+ordenentidad,str
+codigo_pci,str
+id_del_proceso,str
+referencia_del_proceso,str
+ppi,str
+id_del_portafolio,str
+nombre_del_procedimiento,str
+descripci_n_del_procedimiento,str
+fase,str
+fecha_de_publicacion_del,"datetime64[us, UTC]"
+fecha_de_ultima_publicaci,"datetime64[us, UTC]"
+fecha_de_publicacion_fase_3,str
+precio_base,int64
+modalidad_de_contratacion,str
+justificaci_n_modalidad_de,str
+duracion,int64
+unidad_de_duracion,str
+fecha_de_recepcion_de,"datetime64[us, UTC]"
+fecha_de_apertura_de_respuesta,"datetime64[us, UTC]"
+ciudad_de_la_unidad_de,str
+nombre_de_la_unidad_de,str
+proveedores_invitados,int64
+proveedores_con_invitacion,int64
+visualizaciones_del,int64
+proveedores_que_manifestaron,int64
+respuestas_al_procedimiento,int64
+respuestas_externas,int64
+conteo_de_respuestas_a_ofertas,int64
+proveedores_unicos_con,int64
+numero_de_lotes,int64
+estado_del_procedimiento,str
+id_estado_del_procedimiento,str
+codigo_principal_de_categoria,str
+estado_de_apertura_del_proceso,str
+tipo_de_contrato,str
+subtipo_de_contrato,str
+categorias_adicionales,str
+urlproceso,object
+codigo_entidad,str
+estado_resumen,str
+fecha_de_apertura_efectiva,"datetime64[us, UTC]"
+fecha_adjudicacion,str
+fecha_de_publicacion_fase_2,str
+fecha_de_publicacion,"datetime64[us, UTC]"
+fecha_de_publicacion_fase,str
+url,str

@@ -1,0 +1,9 @@
+﻿estado_del_procedimiento,dias_hasta_recepcion,dias_hasta_apertura,duracion_proceso_si_aplica
+Abierto,,,
+Aprobado,,,
+Borrador,10.0,10.0,10.0
+Cancelado,10.0,10.0,10.0
+Evaluación,9.0,9.0,9.0
+Publicado,,,
+Seleccionado,,,
+Suspendido,13.0,13.0,13.0

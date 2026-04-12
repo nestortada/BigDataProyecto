@@ -1,0 +1,25 @@
+﻿tipo_de_contrato,count,mean,median,min,max
+Prestación de servicios,315570,0.1896092784485217,0.0,0,100
+Suministros,28370,4.256045118082482,0.0,0,88
+Otro,27325,0.16193961573650503,0.0,0,79
+Compraventa,22992,1.9429801670146138,0.0,0,77
+Decreto 092 de 2017,17942,0.15472076691561698,0.0,0,17
+No,12905,0.0,0.0,0,0
+Obra,11088,0.42045454545454547,0.0,0,8
+Arrendamiento de inmuebles,4167,0.038636909047276215,0.0,0,32
+Interventoría,2684,3.342026825633383,0.0,0,17
+Consultoría,1703,0.11626541397533764,0.0,0,6
+Comodato,1671,0.0,0.0,0,0
+Seguros,1554,0.98005148005148,0.0,0,7
+No Especificado,583,0.0,0.0,0,0
+Arrendamiento de muebles,476,0.025210084033613446,0.0,0,2
+Operaciones de Crédito Público,257,0.0,0.0,0,0
+Acuerdo Marco de Precios,257,9.373540856031129,7.0,1,29
+Servicios financieros,173,0.7167630057803468,0.0,0,5
+Venta muebles,86,7.941860465116279,0.0,0,44
+Negocio fiduciario,65,0.09230769230769231,0.0,0,2
+Asociación Público Privada,39,0.0,0.0,0,0
+Concesión,36,0.0,0.0,0,0
+Venta inmuebles,30,2.6666666666666665,0.0,0,12
+Comisión,26,0.6538461538461539,0.0,0,11
+Acuerdo de cooperación,1,0.0,0.0,0,0

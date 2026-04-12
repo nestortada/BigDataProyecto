@@ -1,0 +1,51 @@
+﻿column,nunique_including_null,nunique_excluding_null,dominant_value,dominant_share_pct,is_near_constant,is_single_value_non_null
+proveedores_que_manifestaron,1,1,0,100.0,True,True
+subtipo_de_contrato,1,1,No Definido,100.0,True,True
+fecha_de_publicacion_fase,2,1,,99.9998,True,True
+respuestas_externas,18,18,0,99.5384,True,False
+conteo_de_respuestas_a_ofertas,28,28,0,99.1716,True,False
+fecha_de_publicacion,221,220,,98.618,True,False
+fecha_de_publicacion_fase_2,259,258,,96.724,True,False
+proveedores_con_invitacion,193,193,0,95.8936,True,False
+numero_de_lotes,62,62,0,95.2064,True,False
+proveedores_invitados,2856,2856,0,93.2084,False,False
+fecha_adjudicacion,430,429,,84.9298,False,False
+estado_del_procedimiento,8,8,Seleccionado,83.0869,False,False
+proveedores_unicos_con,148,148,0,81.994,False,False
+respuestas_al_procedimiento,148,148,0,81.6529,False,False
+id_estado_del_procedimiento,5,5,70,81.564,False,False
+categorias_adicionales,33746,33746,No definido,81.1453,False,False
+fecha_de_apertura_de_respuesta,314,313,,79.3738,False,False
+estado_de_apertura_del_proceso,2,2,Abierto,79.3738,False,False
+codigo_pci,2,2,Centralizada,79.1804,False,False
+fecha_de_apertura_efectiva,356,355,,76.8362,False,False
+visualizaciones_del,431,431,0,74.6476,False,False
+fecha_de_recepcion_de,337,336,,74.5142,False,False
+tipo_de_contrato,24,24,Prestación de servicios,70.1267,False,False
+modalidad_de_contratacion,17,17,Contratación directa,62.9698,False,False
+ordenentidad,3,3,Territorial,61.6176,False,False
+unidad_de_duracion,6,6,día(s),61.1924,False,False
+justificaci_n_modalidad_de,32,32,Servicios profesionales y apoyo a la gestión,58.3136,False,False
+fase,14,13,Presentación de oferta,51.4631,False,False
+estado_resumen,15,15,Fase de ofertas,42.6833,False,False
+departamento_entidad,34,34,Distrito Capital de Bogotá,35.3122,False,False
+ciudad_de_la_unidad_de,454,454,No Aplica,29.0607,False,False
+codigo_principal_de_categoria,8594,8594,V1.80111600,26.0358,False,False
+ciudad_entidad,410,410,Bogotá,22.1707,False,False
+duracion,1024,1024,0,6.1613,False,False
+fecha_de_publicacion_fase_3,273,272,,4.6582,False,False
+precio_base,116591,116591,0,4.41,False,False
+nit_entidad,1627,1627,899999034,3.8236,False,False
+nombre_del_procedimiento,251184,251184,PRESTACION DE SERVICIOS PROFESIONALES,2.7822,False,False
+nombre_de_la_unidad_de,3454,3454,SUBDIRECCION DE CONTRATACION,1.8404,False,False
+entidad,1985,1985,(Secretaría Distrital de Integración Social),1.7549,False,False
+ppi,1985,1985,702271321,1.7549,False,False
+codigo_entidad,1985,1985,702271321,1.7549,False,False
+fecha_de_publicacion_del,271,271,2022-01-06T00:00:00+00:00,1.1104,False,False
+fecha_de_ultima_publicaci,271,271,2022-01-06T00:00:00+00:00,1.1104,False,False
+descripci_n_del_procedimiento,272768,272768,No definido,0.9316,False,False
+id_del_proceso,429541,429541,CO1.REQ.2029907,0.1076,False,False
+referencia_del_proceso,390887,390887,IC 042-2021,0.1076,False,False
+id_del_portafolio,409266,409266,CO1.BDOS.1974907,0.1076,False,False
+urlproceso,429493,429493,"{""url"": ""https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.1974585""}",0.1076,False,False
+url,429493,429493,https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.1974585,0.1076,False,False
