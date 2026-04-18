@@ -1,0 +1,411 @@
+﻿category,count,relative_pct
+Bogotá,93464,21.759
+,90675,21.1097
+Cali,33077,7.7005
+Medellín,27037,6.2944
+Bucaramanga,9906,2.3062
+Cúcuta,8220,1.9137
+Villavicencio,7809,1.818
+Barranquilla,7538,1.7549
+Armenia,6720,1.5645
+Ibagué,6568,1.5291
+Cartagena,6465,1.5051
+Pereira,6348,1.4779
+Popayán,6076,1.4145
+Pasto,5392,1.2553
+Santa Marta,5182,1.2064
+Yopal,5156,1.2004
+Manizales,4571,1.0642
+Sincelejo,4431,1.0316
+Tunja,4229,0.9845
+San Andrés,3905,0.9091
+Neiva,3410,0.7939
+Turbaco,3149,0.7331
+Soacha,2817,0.6558
+Valledupar,2700,0.6286
+Floridablanca,2330,0.5424
+Soledad,2277,0.5301
+Envigado,2037,0.4742
+Arauca,1868,0.4349
+Sabaneta,1792,0.4172
+Montería,1667,0.3881
+Riohacha,1600,0.3725
+Mocoa,1591,0.3704
+Quibdó,1328,0.3092
+Palmira,1314,0.3059
+San Gil,1280,0.298
+Facatativá,1203,0.2801
+Tuluá,1167,0.2717
+Bello,1165,0.2712
+Piedecuesta,1155,0.2689
+Jamundí,1106,0.2575
+Dosquebradas,1103,0.2568
+Florencia,1079,0.2512
+Fusagasugá,1055,0.2456
+Villa Del Rosario,1045,0.2433
+La Estrella,986,0.2295
+Rionegro,983,0.2288
+Funza,955,0.2223
+Sogamoso,927,0.2158
+Espinal,895,0.2084
+Chía,870,0.2025
+Guadalajara De Buga,842,0.196
+Apartadó,819,0.1907
+Acacías,795,0.1851
+Zipaquirá,742,0.1727
+Villamaría,741,0.1725
+Girardot,699,0.1627
+Mosquera,675,0.1571
+Calarca,671,0.1562
+Pitalito,642,0.1495
+Caldas,632,0.1471
+Garzón,627,0.146
+Melgar,626,0.1457
+Barrancabermeja,608,0.1415
+Puerto Boyacá,596,0.1388
+Los Patios,573,0.1334
+La Dorada,561,0.1306
+Itagui,552,0.1285
+Cota,527,0.1227
+Tocancipá,519,0.1208
+Madrid,508,0.1183
+Girón,504,0.1173
+Guarne,486,0.1131
+Duitama,472,0.1099
+Cartago,472,0.1099
+Santa Rosa De Cabal,461,0.1073
+Chinchiná,458,0.1066
+Girardota,453,0.1055
+Puerto Asís,447,0.1041
+Cajicá,446,0.1038
+Peñol,439,0.1022
+El Bagre,438,0.102
+Dagua,433,0.1008
+Cumaral,416,0.0968
+El Santuario,409,0.0952
+Candelaria,404,0.0941
+Barbosa,402,0.0936
+Villa De San Diego De Ubate,399,0.0929
+La Jagua De Ibirico,396,0.0922
+Montenegro,389,0.0906
+Retiro,385,0.0896
+Buenaventura,374,0.0871
+Chiquinquirá,373,0.0868
+La Calera,369,0.0859
+Leticia,346,0.0806
+Caucasia,342,0.0796
+San Carlos,340,0.0792
+Villeta,337,0.0785
+Copacabana,331,0.0771
+La Ceja,329,0.0766
+Puerto López,327,0.0761
+Puerto Carreño,322,0.075
+Sevilla,319,0.0743
+Marinilla,312,0.0726
+Málaga,304,0.0708
+La Tebaida,298,0.0694
+Sibaté,296,0.0689
+San José Del Guaviare,291,0.0677
+El Cerrito,282,0.0657
+Aguachica,279,0.065
+La Unión,263,0.0612
+Pamplona,259,0.0603
+Yarumal,256,0.0596
+Andes,253,0.0589
+El Carmen De Viboral,252,0.0587
+Nilo,246,0.0573
+Galapa,246,0.0573
+Nariño,244,0.0568
+Inírida,242,0.0563
+Carolina,241,0.0561
+Chigorodó,240,0.0559
+Santa Rosa De Osos,237,0.0552
+Pradera,234,0.0545
+Flandes,234,0.0545
+Puerto Triunfo,229,0.0533
+La Virginia,229,0.0533
+Ricaurte,227,0.0528
+Sopó,223,0.0519
+Turbo,219,0.051
+Quimbaya,217,0.0505
+Puerto Colombia,210,0.0489
+Solano,204,0.0475
+Circasia,198,0.0461
+Carepa,196,0.0456
+Roldanillo,185,0.0431
+Honda,184,0.0428
+Caicedonia,181,0.0421
+Vélez,179,0.0417
+Yumbo,177,0.0412
+Risaralda,172,0.04
+Andalucía,171,0.0398
+Jardín,162,0.0377
+Ocaña,158,0.0368
+Villa De Leyva,158,0.0368
+Magangué,149,0.0347
+Paratebueno,144,0.0335
+Guacarí,144,0.0335
+Tumaco,143,0.0333
+Don Matías,141,0.0328
+Socorro,138,0.0321
+Gómez Plata,136,0.0317
+La Pintada,135,0.0314
+Restrepo,130,0.0303
+Cisneros,129,0.03
+Campoalegre,126,0.0293
+Guatape,124,0.0289
+Venecia,123,0.0286
+Granada,119,0.0277
+La Plata,113,0.0263
+Ipiales,110,0.0256
+Distrito Capital,105,0.0244
+Hispania,104,0.0242
+Puerto Berrío,98,0.0228
+Amagá,92,0.0214
+San Jerónimo,79,0.0184
+Leguízamo,75,0.0175
+Anolaima,75,0.0175
+Santafé De Antioquia,74,0.0172
+Sabanalarga,74,0.0172
+Tenjo,64,0.0149
+Rivera,58,0.0135
+Mitú,50,0.0116
+Aguazul,45,0.0105
+Saravena,44,0.0102
+Gachala,44,0.0102
+Entrerrios,43,0.01
+Coveñas,42,0.0098
+Corozal,42,0.0098
+Uribia,41,0.0095
+Baranoa,40,0.0093
+San Benito,37,0.0086
+Tame,33,0.0077
+Puerto Tejada,33,0.0077
+Mariquita,30,0.007
+Santa Rosa De Viterbo,27,0.0063
+Bolívar,26,0.0061
+Zarzal,25,0.0058
+Baraya,23,0.0054
+Paz De Ariporo,23,0.0054
+Paicol,23,0.0054
+San Rafael,23,0.0054
+Maicao,22,0.0051
+Guaduas,20,0.0047
+La Paz,20,0.0047
+Istmina,19,0.0044
+Cogua,19,0.0044
+Pacho,19,0.0044
+Guateque,17,0.004
+San Agustín,17,0.004
+Socha,15,0.0035
+Pensilvania,14,0.0033
+Tierralta,13,0.003
+Teorama,13,0.003
+Cravo Norte,13,0.003
+Lenguazaque,11,0.0026
+El Banco,11,0.0026
+Puerto Libertador,11,0.0026
+Puerto Rico,11,0.0026
+La Mesa,11,0.0026
+Fonseca,11,0.0026
+Yondó,11,0.0026
+Altamira,10,0.0023
+Isnos,10,0.0023
+Belén De Umbría,10,0.0023
+Socotá,10,0.0023
+Aquitania,10,0.0023
+Sonson,9,0.0021
+Tauramena,9,0.0021
+Miraflores,9,0.0021
+Abejorral,9,0.0021
+Santa Rosa,9,0.0021
+Belén,9,0.0021
+El Copey,9,0.0021
+Cucunubá,9,0.0021
+Chíquiza,8,0.0019
+Dibulla,8,0.0019
+Sativanorte,8,0.0019
+Palestina,8,0.0019
+San Eduardo,8,0.0019
+Caqueza,8,0.0019
+Santander De Quilichao,8,0.0019
+Supatá,8,0.0019
+Santa María,8,0.0019
+Sotaquirá,7,0.0016
+Chocontá,7,0.0016
+Gameza,7,0.0016
+Aipe,7,0.0016
+Milán,7,0.0016
+Gachetá,7,0.0016
+Santo Domingo,7,0.0016
+Pácora,7,0.0016
+La Montañita,7,0.0016
+San Vicente Del Caguán,7,0.0016
+Pesca,7,0.0016
+San Miguel,7,0.0016
+Hacarí,7,0.0016
+Boyacá,6,0.0014
+Macanal,6,0.0014
+Morales,6,0.0014
+Tibasosa,6,0.0014
+Somondoco,6,0.0014
+Gachantivá,6,0.0014
+La Uvita,6,0.0014
+Iza,6,0.0014
+Covarachía,6,0.0014
+Nocaima,6,0.0014
+Curillo,6,0.0014
+Becerril,6,0.0014
+Saladoblanco,6,0.0014
+La Salina,6,0.0014
+Tabio,6,0.0014
+Tocaima,5,0.0012
+Coper,5,0.0012
+Motavita,5,0.0012
+Turbaná,5,0.0012
+El Carmen De Bolívar,5,0.0012
+Hatonuevo,5,0.0012
+Aratoca,5,0.0012
+Tuta,5,0.0012
+Buenavista,5,0.0012
+Cucaita,5,0.0012
+Marmato,5,0.0012
+Cabrera,5,0.0012
+Cerinza,5,0.0012
+Susacón,5,0.0012
+Paya,5,0.0012
+Chita,5,0.0012
+Sáchica,5,0.0012
+Sitionuevo,4,0.0009
+Manzanares,4,0.0009
+Ramiriquí,4,0.0009
+Piendamó,4,0.0009
+Chitaraque,4,0.0009
+Albania,4,0.0009
+Tutazá,4,0.0009
+Luruaco,4,0.0009
+San Juan Nepomuceno,4,0.0009
+Guamal,4,0.0009
+Tausa,4,0.0009
+Cuítiva,4,0.0009
+Tinjacá,4,0.0009
+San Mateo,4,0.0009
+Tasco,4,0.0009
+Siachoque,4,0.0009
+Moniquirá,4,0.0009
+Sora,4,0.0009
+Líbano,4,0.0009
+Briceño,4,0.0009
+Villapinzón,4,0.0009
+Providencia,4,0.0009
+La Playa,4,0.0009
+Arroyohondo,3,0.0007
+San Jacinto,3,0.0007
+Garagoa,3,0.0007
+María La Baja,3,0.0007
+El Paso,3,0.0007
+Nobsa,3,0.0007
+Cómbita,3,0.0007
+Clemencia,3,0.0007
+Susa,3,0.0007
+Nuevo Colón,3,0.0007
+Betéitiva,3,0.0007
+Orito,3,0.0007
+Villagarzón,3,0.0007
+Tibú,3,0.0007
+Berbeo,3,0.0007
+San Pedro,3,0.0007
+San Pablo De Borbur,3,0.0007
+Ciénega,3,0.0007
+Maripí,3,0.0007
+Salamina,3,0.0007
+Pauna,3,0.0007
+Buenos Aires,3,0.0007
+Pachavita,3,0.0007
+Pisba,3,0.0007
+Palermo,3,0.0007
+Victoria,3,0.0007
+Belén De Los Andaquies,3,0.0007
+Floresta,3,0.0007
+Valdivia,3,0.0007
+Tota,3,0.0007
+Puerto Guzmán,3,0.0007
+Necoclí,3,0.0007
+Oporapa,2,0.0005
+Güepsa,2,0.0005
+San Vicente De Chucurí,2,0.0005
+Pijao,2,0.0005
+Murindó,2,0.0005
+San Miguel De Sema,2,0.0005
+Guamo,2,0.0005
+Timbío,2,0.0005
+Saldaña,2,0.0005
+Guatavita,2,0.0005
+La Florida,2,0.0005
+Zona Bananera,2,0.0005
+Riosucio,2,0.0005
+Boavita,2,0.0005
+Contadero,2,0.0005
+Rondón,2,0.0005
+Corrales,2,0.0005
+El Cocuy,2,0.0005
+Cabuyaro,2,0.0005
+Santana,2,0.0005
+Muzo,2,0.0005
+Cantagallo,2,0.0005
+Venadillo,2,0.0005
+Valparaíso,2,0.0005
+Barbacoas,2,0.0005
+Tibirita,2,0.0005
+Chinácota,2,0.0005
+Morelia,2,0.0005
+Sutatenza,2,0.0005
+Tena,2,0.0005
+San Martín,2,0.0005
+Gambita,2,0.0005
+Patía,2,0.0005
+Acevedo,2,0.0005
+Firavitoba,2,0.0005
+Sucre,2,0.0005
+Mogotes,2,0.0005
+Arjona,1,0.0002
+Colón,1,0.0002
+Pueblorrico,1,0.0002
+Puerto Salgar,1,0.0002
+Santa Bárbara,1,0.0002
+Paz De Río,1,0.0002
+Sesquilé,1,0.0002
+El Doncello,1,0.0002
+Quípama,1,0.0002
+San José,1,0.0002
+Sativasur,1,0.0002
+Sutamarchán,1,0.0002
+Polonuevo,1,0.0002
+San José Del Fragua,1,0.0002
+Anorí,1,0.0002
+Sácama,1,0.0002
+Simijaca,1,0.0002
+Manaure,1,0.0002
+Ambalema,1,0.0002
+Plato,1,0.0002
+Gachancipá,1,0.0002
+Filandia,1,0.0002
+Subachoque,1,0.0002
+Viotá,1,0.0002
+Arbeláez,1,0.0002
+Suárez,1,0.0002
+Gualmatán,1,0.0002
+Elías,1,0.0002
+Guayabal De Siquima,1,0.0002
+Soatá,1,0.0002
+Aguada,1,0.0002
+Nátaga,1,0.0002
+El Dorado,1,0.0002
+Simacota,1,0.0002
+Guadalupe,1,0.0002
+Gama,1,0.0002
+Vetas,1,0.0002
+Rosas,1,0.0002
+Río De Oro,1,0.0002
+Manta,1,0.0002
+El Carmen,1,0.0002

@@ -1,0 +1,711 @@
+{
+  "run_timestamp_utc": "2026-04-18T13:55:40.867257+00:00",
+  "input_path": "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Limpieza\\datos_feature_engineering.parquet",
+  "output_dir": "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo",
+  "project_root": "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto",
+  "plotting_available": true,
+  "plotting_import_error": null,
+  "prefect_available": true,
+  "dependencies": {
+    "dependency_status": {
+      "numpy": true,
+      "pandas": true,
+      "pyarrow": true,
+      "prefect": true,
+      "matplotlib": true,
+      "seaborn": true,
+      "scipy": true
+    },
+    "requirements_appended": [],
+    "missing_dependencies": []
+  },
+  "dataset_overview": {
+    "n_rows": 429541.0,
+    "n_columns": 100.0,
+    "memory_usage_mb": 520.06,
+    "n_datetime_columns": 3.0,
+    "n_numeric_columns": 32.0,
+    "n_binary_numeric_columns": 23.0,
+    "n_boolean_columns": 16.0,
+    "n_categorical_columns": 19.0,
+    "n_text_columns": 4.0,
+    "n_technical_columns": 4.0
+  },
+  "priority_columns_present": [
+    "entidad",
+    "nit_entidad",
+    "departamento_entidad",
+    "ciudad_entidad",
+    "ordenentidad",
+    "id_del_proceso",
+    "referencia_del_proceso",
+    "id_del_portafolio",
+    "nombre_del_procedimiento",
+    "descripcion_del_procedimiento",
+    "fase",
+    "modalidad_de_contratacion",
+    "tipo_de_contrato",
+    "fecha_de_publicacion",
+    "fecha_de_recepcion",
+    "fecha_de_apertura",
+    "precio_base",
+    "proveedores_invitados",
+    "proveedores_con_invitacion",
+    "respuestas_al_procedimiento",
+    "respuestas_externas",
+    "conteo_de_respuestas_a_ofertas",
+    "numero_de_lotes",
+    "urlproceso",
+    "score_completitud",
+    "score_trazabilidad",
+    "score_temporal",
+    "score_competencia",
+    "transparency_score",
+    "nivel_riesgo_transparencia",
+    "confianza_label",
+    "evidence_coverage",
+    "margin_to_threshold"
+  ],
+  "priority_columns_missing": [],
+  "alias_map": {
+    "descripcion_del_procedimiento": "descripci_n_del_procedimiento",
+    "fecha_de_publicacion": "fecha_de_publicacion_del",
+    "fecha_de_recepcion": "fecha_de_recepcion_de",
+    "fecha_de_apertura": "fecha_de_apertura_de_respuesta"
+  },
+  "conversion_summary": [
+    {
+      "column": "fecha_de_publicacion_del",
+      "conversion_type": "datetime",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "fecha_de_recepcion_de",
+      "conversion_type": "datetime",
+      "non_null_before": 94227,
+      "non_null_after": 94227,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "fecha_de_apertura_de_respuesta",
+      "conversion_type": "datetime",
+      "non_null_before": 72838,
+      "non_null_after": 72838,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "completitud_critica",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "conteo_de_respuestas_a_ofertas",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "dias_hasta_recepcion",
+      "conversion_type": "numeric",
+      "non_null_before": 94183,
+      "non_null_after": 94183,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "dias_publicacion_a_apertura",
+      "conversion_type": "numeric",
+      "non_null_before": 72838,
+      "non_null_after": 72838,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "dias_publicacion_a_recepcion",
+      "conversion_type": "numeric",
+      "non_null_before": 94227,
+      "non_null_after": 94227,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "dias_recepcion_a_apertura",
+      "conversion_type": "numeric",
+      "non_null_before": 72838,
+      "non_null_after": 72838,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "duracion",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "duracion_dias",
+      "conversion_type": "numeric",
+      "non_null_before": 428958,
+      "non_null_after": 428958,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "evidence_coverage",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_coherencia_temporal_global",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_datos_competencia_disponibles",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_evidencia_competencia_suficiente",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_evidencia_completitud_suficiente",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_evidencia_temporal_suficiente",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_evidencia_trazabilidad_suficiente",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_fechas_temporales_disponibles",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_hubo_competencia_minima",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_hubo_participacion",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_id_proceso_valido",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_portafolio_disponible",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_publicacion_antes_recepcion",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_recepcion_antes_apertura",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_referencia_valida",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_tiene_categoria",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_tiene_descripcion_util",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_tiene_precio_base",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_tiene_tipo_modalidad",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_tiene_ubicacion_entidad",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_tiene_url_publica",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_ventana_apertura_razonable",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "flag_ventana_recepcion_razonable",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "intensidad_competencia_log",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "intensidad_competencia_normalizada",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "longitud_descripcion",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "margin_to_threshold",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "missing_required_fields_count",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "missing_temporal_count",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "numero_de_lotes",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "penalizacion_duplicado",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "precio_base",
+      "conversion_type": "numeric",
+      "non_null_before": 429539,
+      "non_null_after": 429539,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "precio_base_log",
+      "conversion_type": "numeric",
+      "non_null_before": 429539,
+      "non_null_after": 429539,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "proveedores_con_invitacion",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "proveedores_invitados",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "proveedores_unicos_con",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "ratio_proveedores_vs_invitados",
+      "conversion_type": "numeric",
+      "non_null_before": 28220,
+      "non_null_after": 28220,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "respuestas_al_procedimiento",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "respuestas_externas",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "riesgo_baja_transparencia",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "score_competencia",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "score_completitud",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "score_temporal",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "score_trazabilidad",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "score_trazabilidad_base",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "total_interes_oferentes",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "total_respuestas",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "transparency_score",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    },
+    {
+      "column": "visualizaciones_del",
+      "conversion_type": "numeric",
+      "non_null_before": 429541,
+      "non_null_after": 429541,
+      "coerced_to_null": 0
+    }
+  ],
+  "top_null_columns": [
+    {
+      "column": "ratio_proveedores_vs_invitados",
+      "semantic_group": "numeric",
+      "null_count": 401321,
+      "null_pct": 93.4302,
+      "non_null_count": 28220,
+      "completeness_pct": 6.5698
+    },
+    {
+      "column": "categorias_adicionales",
+      "semantic_group": "categorical",
+      "null_count": 360572,
+      "null_pct": 83.9436,
+      "non_null_count": 68969,
+      "completeness_pct": 16.0564
+    },
+    {
+      "column": "fecha_de_apertura_de_respuesta",
+      "semantic_group": "datetime",
+      "null_count": 356703,
+      "null_pct": 83.0428,
+      "non_null_count": 72838,
+      "completeness_pct": 16.9572
+    },
+    {
+      "column": "dias_recepcion_a_apertura",
+      "semantic_group": "numeric",
+      "null_count": 356703,
+      "null_pct": 83.0428,
+      "non_null_count": 72838,
+      "completeness_pct": 16.9572
+    },
+    {
+      "column": "dias_publicacion_a_apertura",
+      "semantic_group": "numeric",
+      "null_count": 356703,
+      "null_pct": 83.0428,
+      "non_null_count": 72838,
+      "completeness_pct": 16.9572
+    },
+    {
+      "column": "dias_hasta_recepcion",
+      "semantic_group": "numeric",
+      "null_count": 335358,
+      "null_pct": 78.0736,
+      "non_null_count": 94183,
+      "completeness_pct": 21.9264
+    },
+    {
+      "column": "fecha_de_recepcion_de",
+      "semantic_group": "datetime",
+      "null_count": 335314,
+      "null_pct": 78.0633,
+      "non_null_count": 94227,
+      "completeness_pct": 21.9367
+    },
+    {
+      "column": "dias_publicacion_a_recepcion",
+      "semantic_group": "numeric",
+      "null_count": 335314,
+      "null_pct": 78.0633,
+      "non_null_count": 94227,
+      "completeness_pct": 21.9367
+    },
+    {
+      "column": "ciudad_entidad",
+      "semantic_group": "categorical",
+      "null_count": 90675,
+      "null_pct": 21.1097,
+      "non_null_count": 338866,
+      "completeness_pct": 78.8903
+    },
+    {
+      "column": "departamento_entidad",
+      "semantic_group": "categorical",
+      "null_count": 7735,
+      "null_pct": 1.8008,
+      "non_null_count": 421806,
+      "completeness_pct": 98.1992
+    }
+  ],
+  "duplicates_summary": [
+    {
+      "duplicate_type": "exact_all_columns",
+      "subset_columns": "all_columns",
+      "duplicate_rows": 0,
+      "duplicate_groups_or_keys": NaN,
+      "duplicate_pct": 0.0
+    },
+    {
+      "duplicate_type": "key_based",
+      "subset_columns": "id_del_proceso",
+      "duplicate_rows": 0,
+      "duplicate_groups_or_keys": 0.0,
+      "duplicate_pct": 0.0
+    },
+    {
+      "duplicate_type": "key_based",
+      "subset_columns": "referencia_del_proceso",
+      "duplicate_rows": 52346,
+      "duplicate_groups_or_keys": 13692.0,
+      "duplicate_pct": 12.1865
+    },
+    {
+      "duplicate_type": "key_based",
+      "subset_columns": "id_del_portafolio",
+      "duplicate_rows": 34599,
+      "duplicate_groups_or_keys": 14324.0,
+      "duplicate_pct": 8.0549
+    },
+    {
+      "duplicate_type": "key_based",
+      "subset_columns": "urlproceso",
+      "duplicate_rows": 50,
+      "duplicate_groups_or_keys": 2.0,
+      "duplicate_pct": 0.0116
+    },
+    {
+      "duplicate_type": "key_based",
+      "subset_columns": "id_del_proceso, referencia_del_proceso",
+      "duplicate_rows": 0,
+      "duplicate_groups_or_keys": 0.0,
+      "duplicate_pct": 0.0
+    }
+  ],
+  "generated_plots": {
+    "numeric_plots": [
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\precio_base_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\precio_base_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\duracion_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\duracion_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\duracion_dias_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\duracion_dias_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\proveedores_invitados_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\proveedores_invitados_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\proveedores_con_invitacion_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\proveedores_con_invitacion_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\respuestas_al_procedimiento_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\respuestas_al_procedimiento_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\respuestas_externas_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\respuestas_externas_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\conteo_de_respuestas_a_ofertas_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\conteo_de_respuestas_a_ofertas_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\proveedores_unicos_con_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\proveedores_unicos_con_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\numero_de_lotes_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\numero_de_lotes_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\visualizaciones_del_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\visualizaciones_del_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\dias_hasta_recepcion_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\dias_hasta_recepcion_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\dias_publicacion_a_recepcion_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\dias_publicacion_a_recepcion_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\dias_recepcion_a_apertura_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\dias_recepcion_a_apertura_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\dias_publicacion_a_apertura_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\dias_publicacion_a_apertura_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\total_respuestas_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\total_respuestas_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\total_interes_oferentes_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\total_interes_oferentes_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\score_completitud_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\score_completitud_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\score_temporal_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\score_temporal_box.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\score_competencia_hist.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\numeric\\score_competencia_box.png"
+    ],
+    "categorical_plots": [
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\departamento_entidad_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\ordenentidad_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\fase_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\modalidad_de_contratacion_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\tipo_de_contrato_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\nivel_riesgo_transparencia_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\confianza_label_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\justificaci_n_modalidad_de_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\unidad_de_duracion_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\duracion_improbable_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\unidad_de_duracion_desconocida_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\fue_duplicado_logico_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\flag_precio_base_extremo_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\fue_duplicado_exacto_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\tiene_descripcion_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\anomalia_apertura_antes_recepcion_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\anomalia_temporal_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\precio_base_es_cero_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\competencia_reportada_top_categories.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\categorical\\tiene_categorias_adicionales_top_categories.png"
+    ],
+    "temporal_plots": [
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\temporal\\fecha_de_publicacion_del_by_year.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\temporal\\fecha_de_publicacion_del_by_month.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\temporal\\fecha_de_recepcion_de_by_year.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\temporal\\fecha_de_recepcion_de_by_month.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\temporal\\fecha_de_apertura_de_respuesta_by_year.png",
+      "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\plots\\temporal\\fecha_de_apertura_de_respuesta_by_month.png"
+    ]
+  },
+  "artifacts": {
+    "dataset_overview.csv": "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\dataset_overview.csv",
+    "column_inventory.csv": "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\column_inventory.csv",
+    "dtypes.csv": "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\dtypes.csv",
+    "null_profile.csv": "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\null_profile.csv",
+    "duplicates_summary.csv": "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\duplicates_summary.csv",
+    "numeric_summary.csv": "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\numeric_summary.csv",
+    "categorical_summary.csv": "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\categorical_summary.csv",
+    "datetime_summary.csv": "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\datetime_summary.csv",
+    "transparency_summary.csv": "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\transparency_summary.csv",
+    "correlation_matrix.csv": "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\correlation_matrix.csv",
+    "executive_summary.md": "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Data\\Processed\\Descriptivo\\executive_summary.md"
+  }
+}

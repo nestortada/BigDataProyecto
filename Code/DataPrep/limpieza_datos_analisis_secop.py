@@ -175,7 +175,7 @@ PROJECT_ROOT = find_project_root(Path.cwd())
 load_dotenv(PROJECT_ROOT / ".env")
 
 SOURCE_PARQUET = PROJECT_ROOT / "Data" / "Raw" / "datos_analisis.parquet"
-OUTPUT_DIR = PROJECT_ROOT / "processed"
+OUTPUT_DIR = PROJECT_ROOT / "Data" / "Processed" / "Limpieza"
 OUTPUT_PARQUET = OUTPUT_DIR / "datos_analisis_limpio.parquet"
 OUTPUT_SUMMARY = OUTPUT_DIR / "datos_analisis_limpio_validacion.json"
 TABLE_NAME = "datos_analisis_limpio"

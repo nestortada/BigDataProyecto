@@ -1,0 +1,4 @@
+﻿column,non_null_count,null_count,null_pct,min_datetime,max_datetime,min_year,max_year,distinct_years,most_common_year,most_common_month
+fecha_de_publicacion_del,429541,0,0.0,2021-04-12T00:00:00+00:00,2022-01-07T00:00:00+00:00,2021,2022,2,2021,2021-08
+fecha_de_recepcion_de,94227,335314,78.0633,2021-03-15T00:00:00+00:00,2023-07-21T00:00:00+00:00,2021,2023,3,2021,2021-11
+fecha_de_apertura_de_respuesta,72838,356703,83.0428,2021-04-13T00:00:00+00:00,2023-07-22T00:00:00+00:00,2021,2023,3,2021,2021-11

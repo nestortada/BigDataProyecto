@@ -1,0 +1,2 @@
+﻿n_rows,n_columns,memory_usage_mb,n_datetime_columns,n_numeric_columns,n_binary_numeric_columns,n_boolean_columns,n_categorical_columns,n_text_columns,n_technical_columns
+429541,100,520.06,3,32,23,16,19,4,4

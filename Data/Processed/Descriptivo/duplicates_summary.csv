@@ -1,0 +1,7 @@
+﻿duplicate_type,subset_columns,duplicate_rows,duplicate_groups_or_keys,duplicate_pct
+exact_all_columns,all_columns,0,,0.0
+key_based,id_del_proceso,0,0.0,0.0
+key_based,referencia_del_proceso,52346,13692.0,12.1865
+key_based,id_del_portafolio,34599,14324.0,8.0549
+key_based,urlproceso,50,2.0,0.0116
+key_based,"id_del_proceso, referencia_del_proceso",0,0.0,0.0

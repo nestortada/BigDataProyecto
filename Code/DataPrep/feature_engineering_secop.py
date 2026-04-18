@@ -5,6 +5,7 @@ import importlib
 import inspect
 import math
 import os
+import platform
 import re
 import subprocess
 import sys
@@ -20,19 +21,27 @@ from dotenv import load_dotenv
 
 
 BOOTSTRAP_ROOT = Path(__file__).resolve().parents[2]
-LOCAL_PACKAGE_DIR = BOOTSTRAP_ROOT / ".python_packages"
+LOCAL_PACKAGE_ROOT = BOOTSTRAP_ROOT / ".python_packages"
+RUNTIME_TAG = f"py{sys.version_info.major}{sys.version_info.minor}-{sys.platform}-{platform.machine().lower()}"
+LOCAL_PACKAGE_DIR = LOCAL_PACKAGE_ROOT / RUNTIME_TAG
 
-if LOCAL_PACKAGE_DIR.exists():
-    sys.path.insert(0, str(LOCAL_PACKAGE_DIR))
+
+def register_local_package_dir() -> None:
+    if LOCAL_PACKAGE_DIR.exists() and str(LOCAL_PACKAGE_DIR) not in sys.path:
+        # Append instead of prepend so the active virtualenv keeps priority.
+        sys.path.append(str(LOCAL_PACKAGE_DIR))
+
+
+register_local_package_dir()
 
 DEPENDENCY_MAP = {
     "prefect": "prefect",
     "psycopg2": "psycopg2-binary",
 }
 
-PROJECT_MARKERS = {".env", "Code", "processed"}
-INPUT_PARQUET = Path("processed/datos_analisis_limpio.parquet")
-OUTPUT_PARQUET = Path("processed/datos_feature_engineering.parquet")
+PROJECT_MARKERS = {".env", "Code", "Data", "Processed"}
+INPUT_PARQUET = Path("Data/Processed/Limpieza/datos_analisis_limpio.parquet")
+OUTPUT_PARQUET = Path("Data/Processed/Limpieza/datos_feature_engineering.parquet")
 OUTPUT_TABLE = "secop_feature_engineering"
 
 REQUIRED_COLUMNS = {
@@ -107,15 +116,15 @@ PUBLIC_URL_PATTERN = re.compile(
 def install_missing_dependency(module_name: str, package_name: str) -> bool:
     try:
         LOCAL_PACKAGE_DIR.mkdir(parents=True, exist_ok=True)
+        register_local_package_dir()
         subprocess.run(
             [sys.executable, "-m", "pip", "install", "--target", str(LOCAL_PACKAGE_DIR), package_name],
             check=True,
             capture_output=True,
             text=True,
         )
-        if str(LOCAL_PACKAGE_DIR) not in sys.path:
-            sys.path.insert(0, str(LOCAL_PACKAGE_DIR))
         importlib.invalidate_caches()
+        register_local_package_dir()
         return True
     except Exception:
         print(

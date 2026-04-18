@@ -1,0 +1,16 @@
+﻿column,profile_type,non_null_count,null_count,null_pct,mean,median,min,p25,p75,max,top_category,top_share_pct,positive_rate_pct
+flag_evidencia_competencia_suficiente,binary_indicator,429541,0,0.0,,,,,,,,,100.0
+flag_evidencia_completitud_suficiente,binary_indicator,429541,0,0.0,,,,,,,,,100.0
+flag_evidencia_temporal_suficiente,binary_indicator,429541,0,0.0,,,,,,,,,16.9572
+flag_evidencia_trazabilidad_suficiente,binary_indicator,429541,0,0.0,,,,,,,,,100.0
+riesgo_baja_transparencia,binary_indicator,429541,0,0.0,,,,,,,,,79.3207
+confianza_label,categorical,429541,0,0.0,,,,,,,baja,61.7298,
+nivel_riesgo_transparencia,categorical,429541,0,0.0,,,,,,,medio,78.6155,
+evidence_coverage,numeric,429541,0,0.0,0.7923929264028347,0.75,0.75,0.75,0.75,1.0,,,
+margin_to_threshold,numeric,429541,0,0.0,0.1037770165750851,0.05999999999999994,0.0,0.05999999999999994,0.10499999999999998,0.35,,,
+score_competencia,numeric,429541,0,0.0,0.2862503764945327,0.2,0.2,0.2,0.2,1.0,,,
+score_completitud,numeric,429541,0,0.0,0.9551884453404913,1.0,0.2,0.85,1.0,1.0,,,
+score_temporal,numeric,429541,0,0.0,0.1917765708046496,0.0,0.0,0.0,0.0,1.0,,,
+score_trazabilidad,numeric,429541,0,0.0,0.9965634246789014,1.0,0.4,1.0,1.0,1.0,,,
+score_trazabilidad_base,numeric,429541,0,0.0,0.9991618960704566,1.0,0.75,1.0,1.0,1.0,,,
+transparency_score,numeric,429541,0,0.0,0.6408916077719417,0.5900000000000001,0.34750000000000003,0.5900000000000001,0.5900000000000001,1.0,,,
