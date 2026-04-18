@@ -1,0 +1,16 @@
+﻿outcome_column,group_column,left_group,right_group,test_name,statistic,raw_p_value,n_left,n_right,holm_adjusted_p_value,significant_after_holm
+duracion_dias,ordenentidad,Nacional,Territorial,Mann-Whitney U,23421319544.5,0.0,151755,268252,0.0,True
+duracion_dias,ordenentidad,Corporación Autónoma,Territorial,Mann-Whitney U,1319129973.0,3.460010397218617e-57,8951,268252,6.920020794437234e-57,True
+duracion_dias,ordenentidad,Corporación Autónoma,Nacional,Mann-Whitney U,640210312.0,6.07734255664919e-20,8951,151755,6.07734255664919e-20,True
+precio_base_log,ordenentidad,Nacional,Territorial,Mann-Whitney U,23504254518.5,0.0,152001,268565,0.0,True
+precio_base_log,ordenentidad,Corporación Autónoma,Territorial,Mann-Whitney U,1412843836.5,1.0263821076620419e-170,8973,268565,2.0527642153240837e-170,True
+precio_base_log,ordenentidad,Corporación Autónoma,Nacional,Mann-Whitney U,681446982.5,0.9059043778503908,8973,152001,0.9059043778503908,False
+total_interes_oferentes,ordenentidad,Nacional,Territorial,Mann-Whitney U,22139943773.0,0.0,152003,268565,0.0,True
+total_interes_oferentes,ordenentidad,Corporación Autónoma,Nacional,Mann-Whitney U,611673069.0,2.6880095299804765e-124,8973,152003,5.376019059960953e-124,True
+total_interes_oferentes,ordenentidad,Corporación Autónoma,Territorial,Mann-Whitney U,1182490183.5,8.653633877291926e-08,8973,268565,8.653633877291926e-08,True
+total_respuestas,ordenentidad,Nacional,Territorial,Mann-Whitney U,22116357565.0,0.0,152003,268565,0.0,True
+total_respuestas,ordenentidad,Corporación Autónoma,Nacional,Mann-Whitney U,610201873.0,5.387221642602213e-132,8973,152003,1.0774443285204426e-131,True
+total_respuestas,ordenentidad,Corporación Autónoma,Territorial,Mann-Whitney U,1178713935.0,2.638558067929302e-10,8973,268565,2.638558067929302e-10,True
+transparency_score,ordenentidad,Nacional,Territorial,Mann-Whitney U,22493397837.5,0.0,152003,268565,0.0,True
+transparency_score,ordenentidad,Corporación Autónoma,Nacional,Mann-Whitney U,546173007.5,4.024649027652598e-261,8973,152003,8.049298055305196e-261,True
+transparency_score,ordenentidad,Corporación Autónoma,Territorial,Mann-Whitney U,1072173280.5,2.3819961324380374e-94,8973,268565,2.3819961324380374e-94,True

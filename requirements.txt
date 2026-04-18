@@ -5,6 +5,7 @@ pyarrow
 scipy
 matplotlib
 seaborn
+statsmodels
 python-dotenv
 sodapy
 psycopg2-binary

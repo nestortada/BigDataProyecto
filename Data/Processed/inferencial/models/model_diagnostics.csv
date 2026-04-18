@@ -1,0 +1,3 @@
+﻿model_name,target_column,n_used,sampling_applied,metric_r2,metric_adj_r2,metric_rmse,metric_mae,metric_aic,metric_bic,large_sample_warning,status,skip_reason
+linear_regression,transparency_score,120000,True,0.4603125281016668,0.4602000688455158,0.0950224570212999,0.05855181301652556,-224276.83817952126,-224024.76175695538,True,ok,
+logistic_regression,riesgo_baja_transparencia,0,False,,,,,,,False,skipped,'riesgo_baja_transparencia'
