@@ -1,0 +1,75 @@
+============================================================
+CONCLUSIONES DEL PIPELINE DE MODELADO
+============================================================
+
+1. Mejor modelo seleccionado: LogisticRegression_early
+   Metrica principal: F1_score
+   Umbral optimo en validacion: 0.2700
+   Pipeline serializado: C:\Users\nesto\OneDrive - Universidad de la Sabana\Universidad\2026-1\Big data\Proyecto\Models\trained\best_model_pipeline_early.joblib
+
+2. Desempeno en validacion del mejor modelo:
+   - Model: LogisticRegression_early
+   - Threshold: 0.2700
+   - Accuracy: 0.9912
+   - Precision: 0.9955
+   - Recall: 0.9934
+   - F1_score: 0.9944
+   - ROC_AUC: 0.9997
+   - PR_AUC: 0.9999
+   - Leakage_warning: Posible leakage: metrica(s) > 0.995: ROC_AUC, PR_AUC
+
+3. Desempeno en conjunto de prueba (TEST):
+   - Model: LogisticRegression_early_TEST
+   - Threshold: 0.2700
+   - Accuracy: 0.9906
+   - Precision: 0.9951
+   - Recall: 0.9931
+   - F1_score: 0.9941
+   - ROC_AUC: 0.9996
+   - PR_AUC: 0.9999
+   - Leakage_warning: Posible leakage: metrica(s) > 0.995: ROC_AUC, PR_AUC
+
+4. Validacion cruzada estratificada:
+                   Model  F1_mean   F1_std  Recall_mean  Recall_std  Precision_mean  Precision_std  ROC_AUC_mean  ROC_AUC_std  PR_AUC_mean  PR_AUC_std CV_error
+LogisticRegression_early 0.993598 0.000204     0.988783    0.000381        0.998459       0.000142      0.999647     0.000047     0.999864    0.000102         
+      RandomForest_early 0.991466 0.000166     0.997354    0.000439        0.985648       0.000631      0.999512     0.000012     0.999870    0.000003         
+           XGBoost_early 0.993304 0.000145     0.989776    0.000764        0.996858       0.000939      0.999580     0.000032     0.999891    0.000008         
+          LightGBM_early 0.993075 0.000070     0.988055    0.000604        0.998148       0.000547      0.999567     0.000027     0.999888    0.000007         
+          CatBoost_early 0.992789 0.000167     0.989282    0.001061        0.996322       0.001089      0.999535     0.000016     0.999880    0.000004         
+
+5. Notas sobre confiabilidad academica:
+
+   - El preprocesamiento se ajusta dentro de Pipeline/ColumnTransformer usando solo train/CV.
+   - El mejor artefacto guardado incluye imputacion, codificacion, escalamiento y estimador.
+   - Se eliminaron columnas derivadas del target, metadata granular y variables post-evento.
+   - No se uso SMOTE; se priorizo trazabilidad sobre maximizar metricas.
+
+6. Justificación académica del modo EARLY_FEATURES_ONLY:
+   - Este modo busca evaluar capacidad predictiva real usando solo informacion disponible al inicio del proceso, evitando que el modelo reconstruya reglas de completitud, trazabilidad, temporalidad o competencia usadas para construir la etiqueta.
+   - Variables usadas en modo early:
+     * entidad
+     * nit_entidad
+     * departamento_entidad
+     * ciudad_entidad
+     * ordenentidad
+     * nombre_del_procedimiento
+     * descripci_n_del_procedimiento
+     * fase
+     * precio_base
+     * modalidad_de_contratacion
+     * justificaci_n_modalidad_de
+     * codigo_principal_de_categoria
+     * tipo_de_contrato
+     * categorias_adicionales
+     * precio_base_log
+   - Inventario de variables usadas: C:\Users\nesto\OneDrive - Universidad de la Sabana\Universidad\2026-1\Big data\Proyecto\Reports\Model\early_features_selected.csv
+   - Inventario de variables eliminadas y razon: C:\Users\nesto\OneDrive - Universidad de la Sabana\Universidad\2026-1\Big data\Proyecto\Reports\Model\early_features_dropped.csv
+
+7. Advertencias automaticas de posible leakage:
+
+   - Posible leakage: metrica(s) > 0.995: ROC_AUC, PR_AUC
+   - Posible leakage: metrica(s) > 0.995: ROC_AUC, PR_AUC
+   - Posible leakage: metrica(s) > 0.995: ROC_AUC, PR_AUC
+   - Posible leakage: metrica(s) > 0.995: ROC_AUC, PR_AUC
+   - Posible leakage: metrica(s) > 0.995: ROC_AUC, PR_AUC
+   - TEST: Posible leakage: metrica(s) > 0.995: ROC_AUC, PR_AUC

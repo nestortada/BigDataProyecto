@@ -1,0 +1,2 @@
+Model,precision,recall,f1-score,support
+RandomForest,0.9980363135450402,0.999442349177465,0.9987388365033509,68143.0

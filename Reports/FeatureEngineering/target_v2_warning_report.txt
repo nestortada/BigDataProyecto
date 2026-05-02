@@ -1,0 +1,23 @@
+ADVERTENCIAS DE DOMINANCIA DEL TARGET V2
+======================================================================
+
+Criterios:
+- Diferencia extrema: spread de tasas positivas >= 0.65 entre categorias con soporte suficiente.
+- Dominancia positiva: una categoria concentra >= 50% de todos los positivos.
+
+Filas evaluadas: 429,541
+Positivos v2: 1,484 (0.3455%)
+Soporte minimo para spread: 429 filas
+
+- modalidad_de_contratacion: categorias=17, spread_soportado=0.0185
+  ADVERTENCIA dominancia positiva: 'Contratación régimen especial' concentra 63.9488% de positivos con tasa 1.8475%.
+- justificaci_n_modalidad_de: categorias=32, spread_soportado=0.0479
+  ADVERTENCIA dominancia positiva: 'Decreto 092 de 2017' concentra 55.3908% de positivos con tasa 4.7924%.
+- tipo_de_contrato: categorias=24, spread_soportado=0.0479
+  ADVERTENCIA dominancia positiva: 'Decreto 092 de 2017' concentra 55.3908% de positivos con tasa 4.7924%.
+- ordenentidad: categorias=3, spread_soportado=0.0035
+  ADVERTENCIA dominancia positiva: 'Territorial' concentra 82.0081% de positivos con tasa 0.4531%.
+- departamento_entidad: categorias=34, spread_soportado=0.0125
+  ADVERTENCIA dominancia positiva: 'Distrito Capital de Bogotá' concentra 69.5418% de positivos con tasa 0.7043%.
+- entidad: categorias=1,985, spread_soportado=0.1840
+  ADVERTENCIA dominancia positiva: 'SUBRED INTEGRADA DE SERVICIOS DE SALUD NORTE E.S.E. (OFICIAL)' concentra 53.5714% de positivos con tasa 18.3985%.

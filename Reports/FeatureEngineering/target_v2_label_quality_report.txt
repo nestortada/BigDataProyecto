@@ -1,0 +1,40 @@
+REPORTE DE CALIDAD DEL TARGET V2
+======================================================================
+
+Filas: 429,541
+Columnas: 106
+
+Distribucion target legacy:
+                 variable valor  conteo  porcentaje
+riesgo_baja_transparencia     0   88826     20.6793
+riesgo_baja_transparencia     1  340715     79.3207
+
+Distribucion target v2:
+                    variable valor  conteo  porcentaje
+riesgo_baja_transparencia_v2     0  428057     99.6545
+riesgo_baja_transparencia_v2     1    1484      0.3455
+
+Confianza target v2:
+            variable valor  conteo  porcentaje
+target_confidence_v2  alta   82351     19.1719
+target_confidence_v2  baja    7518      1.7502
+target_confidence_v2 media  339672     79.0779
+
+Cobertura de evidencia v2:
+            variable valor  conteo  porcentaje
+evidence_coverage_v2  0.75  335314     78.0633
+evidence_coverage_v2   1.0   94227     21.9367
+
+Dimensiones observadas v2:
+                 variable valor  conteo  porcentaje
+target_dimension_count_v2     3  335314     78.0633
+target_dimension_count_v2     4   94227     21.9367
+
+Cruce target legacy vs target v2:
+v2           0     1
+legacy              
+0        88826     0
+1       339231  1484
+
+Casos con evidencia baja (<0.50): 0
+Positivos v2 con evidencia baja: 0

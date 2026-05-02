@@ -1,0 +1,19 @@
+Classification Report - LogisticRegression_early_TEST
+
+              precision    recall  f1-score   support
+
+           0       0.97      0.98      0.98     17766
+           1       1.00      0.99      0.99     68143
+
+    accuracy                           0.99     85909
+   macro avg       0.98      0.99      0.99     85909
+weighted avg       0.99      0.99      0.99     85909
+
+
+Reporte especifico clase positiva (riesgo=1):
+{
+  "precision": 0.9950738916256158,
+  "recall": 0.9930587147616042,
+  "f1-score": 0.9940652818991098,
+  "support": 68143.0
+}

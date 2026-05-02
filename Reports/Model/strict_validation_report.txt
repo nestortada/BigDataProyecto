@@ -1,0 +1,14 @@
+VALIDACION ESTRICTA CONTRA LEAKAGE TEMPORAL INDIRECTO
+============================================================
+
+Modelo normal comparado: RandomForest
+Modelo estricto comparado: XGBoost_strict
+
+  metric normal_model   strict_model  normal_value  strict_value  absolute_drop  relative_drop
+F1_score RandomForest XGBoost_strict      0.998944      0.998921       0.000023       0.000023
+ ROC_AUC RandomForest XGBoost_strict      0.999979      0.999985      -0.000006      -0.000006
+  PR_AUC RandomForest XGBoost_strict      0.999994      0.999996      -0.000002      -0.000002
+
+No se detecta evidencia fuerte de leakage indirecto por variables temporales.
+
+Criterio: caida absoluta > 0.01 en F1 o > 0.005 en ROC-AUC.

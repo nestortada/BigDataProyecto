@@ -1,0 +1,58 @@
+============================================================
+CONCLUSIONES DEL PIPELINE DE MODELADO
+============================================================
+
+1. Mejor modelo seleccionado: RandomForest
+   Metrica principal: F1_score
+   Umbral optimo en validacion: 0.4200
+   Pipeline serializado: C:\Users\nesto\OneDrive - Universidad de la Sabana\Universidad\2026-1\Big data\Proyecto\Models\trained\best_model_pipeline.joblib
+
+2. Desempeno en validacion del mejor modelo:
+   - Model: RandomForest
+   - Threshold: 0.4200
+   - Accuracy: 0.9983
+   - Precision: 0.9983
+   - Recall: 0.9996
+   - F1_score: 0.9989
+   - ROC_AUC: 1.0000
+   - PR_AUC: 1.0000
+   - Leakage_warning: Posible leakage: metrica(s) > 0.995: F1_score, ROC_AUC, PR_AUC
+
+3. Desempeno en conjunto de prueba (TEST):
+   - Model: RandomForest_TEST
+   - Threshold: 0.4200
+   - Accuracy: 0.9980
+   - Precision: 0.9980
+   - Recall: 0.9994
+   - F1_score: 0.9987
+   - ROC_AUC: 1.0000
+   - PR_AUC: 1.0000
+   - Leakage_warning: Posible leakage: metrica(s) > 0.995: F1_score, ROC_AUC, PR_AUC
+
+4. Validacion cruzada estratificada:
+             Model  F1_mean   F1_std  Recall_mean  Recall_std  Precision_mean  Precision_std  ROC_AUC_mean  ROC_AUC_std  PR_AUC_mean   PR_AUC_std CV_error
+LogisticRegression 0.998301 0.000101     0.997344    0.000250        0.999260       0.000071      0.999944     0.000013     0.999985 3.674083e-06         
+      RandomForest 0.998834 0.000101     0.999168    0.000172        0.998499       0.000088      0.999964     0.000011     0.999989 4.193008e-06         
+      DecisionTree 0.998453 0.000113     0.997588    0.000278        0.999319       0.000235      0.999183     0.000303     0.999581 1.586635e-04         
+  GradientBoosting 0.998612 0.000133     0.999530    0.000104        0.997695       0.000272      0.999977     0.000003     0.999994 9.022773e-07         
+           XGBoost 0.998745 0.000083     0.998474    0.000190        0.999016       0.000105      0.999984     0.000001     0.999996 3.807186e-07         
+          LightGBM 0.998750 0.000087     0.998352    0.000213        0.999148       0.000061      0.999984     0.000002     0.999996 4.529654e-07         
+          CatBoost 0.998376 0.000162     0.997031    0.000397        0.999725       0.000095      0.999984     0.000002     0.999996 4.723386e-07         
+
+5. Notas sobre confiabilidad academica:
+
+   - El preprocesamiento se ajusta dentro de Pipeline/ColumnTransformer usando solo train/CV.
+   - El mejor artefacto guardado incluye imputacion, codificacion, escalamiento y estimador.
+   - Se eliminaron columnas derivadas del target, metadata granular y variables post-evento.
+   - No se uso SMOTE; se priorizo trazabilidad sobre maximizar metricas.
+
+6. Advertencias automaticas de posible leakage:
+
+   - Posible leakage: metrica(s) > 0.995: F1_score, ROC_AUC, PR_AUC
+   - Posible leakage: metrica(s) > 0.995: F1_score, ROC_AUC, PR_AUC
+   - Posible leakage: metrica(s) > 0.995: F1_score, ROC_AUC, PR_AUC
+   - Posible leakage: metrica(s) > 0.995: F1_score, ROC_AUC, PR_AUC
+   - Posible leakage: metrica(s) > 0.995: F1_score, ROC_AUC, PR_AUC
+   - Posible leakage: metrica(s) > 0.995: F1_score, ROC_AUC, PR_AUC
+   - Posible leakage: metrica(s) > 0.995: F1_score, ROC_AUC, PR_AUC
+   - TEST: Posible leakage: metrica(s) > 0.995: F1_score, ROC_AUC, PR_AUC

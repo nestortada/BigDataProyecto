@@ -1,0 +1,6 @@
+{
+  "best_model": "XGBoost_strict",
+  "optimal_threshold": 0.285,
+  "selection_metric": "F1_score",
+  "best_model_pipeline": "C:\\Users\\nesto\\OneDrive - Universidad de la Sabana\\Universidad\\2026-1\\Big data\\Proyecto\\Models\\trained\\best_model_pipeline_strict.joblib"
+}

@@ -1,0 +1,132 @@
+POLITICA DE VARIABLES TEMPRANAS - EARLY_FEATURES_ONLY
+======================================================================
+
+Objetivo:
+Entrenar una version minimalista usando solo informacion disponible al inicio del proceso contractual.
+
+Variables usadas:
+- entidad
+- nit_entidad
+- departamento_entidad
+- ciudad_entidad
+- ordenentidad
+- nombre_del_procedimiento
+- descripci_n_del_procedimiento
+- fase
+- precio_base
+- modalidad_de_contratacion
+- justificaci_n_modalidad_de
+- codigo_principal_de_categoria
+- tipo_de_contrato
+- categorias_adicionales
+- precio_base_log
+
+Variables eliminadas y razon:
+- codigo_pci: no pertenece a la lista de variables tempranas permitidas
+- id_del_proceso: no pertenece a la lista de variables tempranas permitidas | patron prohibido: id_del_proceso
+- referencia_del_proceso: no pertenece a la lista de variables tempranas permitidas | patron prohibido: referencia_del_proceso
+- id_del_portafolio: no pertenece a la lista de variables tempranas permitidas | patron prohibido: id_del_portafolio
+- fecha_de_publicacion_del: no pertenece a la lista de variables tempranas permitidas
+- duracion: no pertenece a la lista de variables tempranas permitidas | patron prohibido: duracion
+- unidad_de_duracion: no pertenece a la lista de variables tempranas permitidas | patron prohibido: duracion
+- fecha_de_recepcion_de: no pertenece a la lista de variables tempranas permitidas
+- fecha_de_apertura_de_respuesta: no pertenece a la lista de variables tempranas permitidas
+- ciudad_de_la_unidad_de: no pertenece a la lista de variables tempranas permitidas
+- nombre_de_la_unidad_de: no pertenece a la lista de variables tempranas permitidas
+- proveedores_invitados: no pertenece a la lista de variables tempranas permitidas | patron prohibido: proveedores
+- proveedores_con_invitacion: no pertenece a la lista de variables tempranas permitidas | patron prohibido: proveedores
+- visualizaciones_del: no pertenece a la lista de variables tempranas permitidas | patron prohibido: visualizaciones
+- respuestas_al_procedimiento: no pertenece a la lista de variables tempranas permitidas | patron prohibido: respuestas
+- respuestas_externas: no pertenece a la lista de variables tempranas permitidas | patron prohibido: respuestas
+- conteo_de_respuestas_a_ofertas: no pertenece a la lista de variables tempranas permitidas | patron prohibido: conteo|respuestas
+- proveedores_unicos_con: no pertenece a la lista de variables tempranas permitidas | patron prohibido: proveedores
+- numero_de_lotes: no pertenece a la lista de variables tempranas permitidas
+- urlproceso: no pertenece a la lista de variables tempranas permitidas | patron prohibido: urlproceso
+- codigo_entidad: no pertenece a la lista de variables tempranas permitidas
+- precio_base_es_cero: no pertenece a la lista de variables tempranas permitidas
+- flag_precio_base_extremo: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag
+- duracion_dias: no pertenece a la lista de variables tempranas permitidas | patron prohibido: duracion|dias
+- duracion_improbable: no pertenece a la lista de variables tempranas permitidas | patron prohibido: duracion
+- unidad_de_duracion_desconocida: no pertenece a la lista de variables tempranas permitidas | patron prohibido: duracion
+- tiene_descripcion: no pertenece a la lista de variables tempranas permitidas | patron prohibido: tiene_
+- tiene_urlproceso: no pertenece a la lista de variables tempranas permitidas | patron prohibido: urlproceso|tiene_
+- tiene_categorias_adicionales: no pertenece a la lista de variables tempranas permitidas | patron prohibido: tiene_
+- ausencia_geografica: no pertenece a la lista de variables tempranas permitidas
+- tiene_fecha_recepcion: no pertenece a la lista de variables tempranas permitidas | patron prohibido: tiene_
+- tiene_fecha_apertura_respuesta: no pertenece a la lista de variables tempranas permitidas | patron prohibido: tiene_
+- tiene_fecha_apertura_efectiva: no pertenece a la lista de variables tempranas permitidas | patron prohibido: tiene_
+- dias_hasta_recepcion: no pertenece a la lista de variables tempranas permitidas | patron prohibido: dias
+- anomalia_apertura_antes_recepcion: no pertenece a la lista de variables tempranas permitidas | patron prohibido: anomalia
+- missing_temporal_count: no pertenece a la lista de variables tempranas permitidas | patron prohibido: temporal|missing|count
+- anomalia_temporal: no pertenece a la lista de variables tempranas permitidas | patron prohibido: temporal|anomalia
+- competencia_reportada: no pertenece a la lista de variables tempranas permitidas | patron prohibido: competencia
+- intensidad_competencia_log: no pertenece a la lista de variables tempranas permitidas | patron prohibido: competencia
+- ratio_proveedores_vs_invitados: no pertenece a la lista de variables tempranas permitidas | patron prohibido: ratio|proveedores
+- completitud_critica: no pertenece a la lista de variables tempranas permitidas | patron prohibido: completitud
+- fue_duplicado_exacto: no pertenece a la lista de variables tempranas permitidas
+- fue_duplicado_logico: no pertenece a la lista de variables tempranas permitidas
+- longitud_descripcion: no pertenece a la lista de variables tempranas permitidas
+- flag_tiene_descripcion_util: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_
+- flag_tiene_categoria: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_
+- flag_tiene_precio_base: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_
+- flag_tiene_ubicacion_entidad: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_
+- flag_tiene_tipo_modalidad: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_
+- missing_required_fields_count: no pertenece a la lista de variables tempranas permitidas | patron prohibido: missing|count
+- flag_id_proceso_valido: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag
+- flag_referencia_valida: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag
+- flag_tiene_url_publica: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_
+- penalizacion_duplicado: no pertenece a la lista de variables tempranas permitidas
+- flag_portafolio_disponible: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag
+- dias_publicacion_a_recepcion: no pertenece a la lista de variables tempranas permitidas | patron prohibido: dias
+- dias_recepcion_a_apertura: no pertenece a la lista de variables tempranas permitidas | patron prohibido: dias
+- dias_publicacion_a_apertura: no pertenece a la lista de variables tempranas permitidas | patron prohibido: dias
+- flag_tiene_fecha_publicacion: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_
+- flag_tiene_fecha_recepcion: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_
+- flag_tiene_fecha_apertura_respuesta: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_
+- flag_fechas_temporales_disponibles: no pertenece a la lista de variables tempranas permitidas | patron prohibido: temporal|flag
+- flag_publicacion_antes_recepcion: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag
+- flag_recepcion_antes_apertura: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag
+- flag_ventana_recepcion_razonable: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag
+- flag_ventana_apertura_razonable: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag
+- flag_incoherencia_temporal_observada: no pertenece a la lista de variables tempranas permitidas | patron prohibido: temporal|coherencia|flag
+- flag_coherencia_temporal_global: no pertenece a la lista de variables tempranas permitidas | patron prohibido: temporal|coherencia|flag
+- total_respuestas: no pertenece a la lista de variables tempranas permitidas | patron prohibido: total|respuestas
+- total_interes_oferentes: no pertenece a la lista de variables tempranas permitidas | patron prohibido: total
+- flag_datos_competencia_disponibles: no pertenece a la lista de variables tempranas permitidas | patron prohibido: competencia|flag
+- flag_hubo_participacion: no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag
+- flag_hubo_competencia_minima: no pertenece a la lista de variables tempranas permitidas | patron prohibido: competencia|flag
+- flag_sin_competencia_observada: no pertenece a la lista de variables tempranas permitidas | patron prohibido: competencia|flag
+- intensidad_competencia_normalizada: no pertenece a la lista de variables tempranas permitidas | patron prohibido: competencia
+- score_completitud: no pertenece a la lista de variables tempranas permitidas | patron prohibido: score|completitud
+- score_trazabilidad_base: no pertenece a la lista de variables tempranas permitidas | patron prohibido: score|trazabilidad
+- score_trazabilidad: no pertenece a la lista de variables tempranas permitidas | patron prohibido: score|trazabilidad
+- score_temporal: no pertenece a la lista de variables tempranas permitidas | patron prohibido: score|temporal
+- score_competencia: no pertenece a la lista de variables tempranas permitidas | patron prohibido: score|competencia
+- transparency_score: no pertenece a la lista de variables tempranas permitidas | patron prohibido: score|transparency
+- nivel_riesgo_transparencia: no pertenece a la lista de variables tempranas permitidas | patron prohibido: riesgo
+- flag_evidencia_completitud_suficiente: no pertenece a la lista de variables tempranas permitidas | patron prohibido: completitud|flag
+- flag_evidencia_trazabilidad_suficiente: no pertenece a la lista de variables tempranas permitidas | patron prohibido: trazabilidad|flag
+- flag_evidencia_temporal_suficiente: no pertenece a la lista de variables tempranas permitidas | patron prohibido: temporal|flag
+- flag_evidencia_competencia_suficiente: no pertenece a la lista de variables tempranas permitidas | patron prohibido: competencia|flag
+- target_dimension_count_v2: no pertenece a la lista de variables tempranas permitidas | patron prohibido: count
+- evidence_coverage_v2: no pertenece a la lista de variables tempranas permitidas | patron prohibido: evidence|coverage
+- riesgo_baja_transparencia_v2: no pertenece a la lista de variables tempranas permitidas | patron prohibido: riesgo
+- target_confidence_v2: no pertenece a la lista de variables tempranas permitidas
+
+Justificación académica del modo EARLY_FEATURES_ONLY
+Este modo busca evaluar capacidad predictiva real usando solo informacion disponible al inicio del proceso, evitando que el modelo reconstruya reglas de completitud, trazabilidad, temporalidad o competencia usadas para construir la etiqueta.
+
+Comparacion automatica normal/strict/early
+======================================================================
+   metric normal_model   strict_model              early_model  normal_value  strict_value  early_value  early_vs_strict_absolute_drop  early_vs_strict_relative_drop  early_vs_normal_absolute_drop  early_vs_normal_relative_drop
+ F1_score RandomForest XGBoost_strict LogisticRegression_early      0.998944      0.998921     0.994440                       0.004482                       0.004487                       0.004505                       0.004509
+   Recall RandomForest XGBoost_strict LogisticRegression_early      0.999560      0.998987     0.993367                       0.005621                       0.005626                       0.006193                       0.006196
+Precision RandomForest XGBoost_strict LogisticRegression_early      0.998329      0.998855     0.995514                       0.003341                       0.003345                       0.002815                       0.002819
+  ROC_AUC RandomForest XGBoost_strict LogisticRegression_early      0.999979      0.999985     0.999672                       0.000313                       0.000313                       0.000307                       0.000307
+   PR_AUC RandomForest XGBoost_strict LogisticRegression_early      0.999994      0.999996     0.999915                       0.000081                       0.000081                       0.000079                       0.000079
+
+Interpretacion automatica:
+- El target puede estar fuertemente determinado por variables estructurales tempranas como modalidad, justificación, tipo de contrato o entidad. Se recomienda validar el labeling y los umbrales.
+
+Criterio de caida importante: F1 >= 0.05, ROC-AUC >= 0.02 o PR-AUC >= 0.02 frente a strict.
+Criterio de rendimiento aun muy alto: F1 >= 0.90, ROC-AUC >= 0.95 o PR-AUC >= 0.95.

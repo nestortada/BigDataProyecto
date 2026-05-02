@@ -1,0 +1,59 @@
+dropped_columns,reason
+flag_coherencia_temporal_global,columna derivada directa/indirectamente del target
+flag_fechas_temporales_disponibles,columna derivada directa/indirectamente del target
+flag_portafolio_disponible,columna derivada directa/indirectamente del target
+flag_publicacion_antes_recepcion,columna derivada directa/indirectamente del target
+flag_recepcion_antes_apertura,columna derivada directa/indirectamente del target
+flag_referencia_valida,columna derivada directa/indirectamente del target
+flag_tiene_categoria,columna derivada directa/indirectamente del target
+flag_tiene_descripcion_util,columna derivada directa/indirectamente del target
+flag_tiene_precio_base,columna derivada directa/indirectamente del target
+flag_tiene_tipo_modalidad,columna derivada directa/indirectamente del target
+flag_tiene_ubicacion_entidad,columna derivada directa/indirectamente del target
+flag_tiene_url_publica,columna derivada directa/indirectamente del target
+flag_ventana_apertura_razonable,columna derivada directa/indirectamente del target
+flag_ventana_recepcion_razonable,columna derivada directa/indirectamente del target
+missing_required_fields_count,columna derivada directa/indirectamente del target
+penalizacion_duplicado,columna derivada directa/indirectamente del target
+flag_evidencia_completitud_suficiente,columna derivada directa/indirectamente del target | derivada del target o score de transparencia
+flag_evidencia_temporal_suficiente,columna derivada directa/indirectamente del target | derivada del target o score de transparencia
+flag_evidencia_trazabilidad_suficiente,columna derivada directa/indirectamente del target | derivada del target o score de transparencia
+nivel_riesgo_transparencia,columna derivada directa/indirectamente del target | derivada del target o score de transparencia
+score_completitud,columna derivada directa/indirectamente del target | derivada del target o score de transparencia
+score_temporal,columna derivada directa/indirectamente del target | derivada del target o score de transparencia
+score_trazabilidad,columna derivada directa/indirectamente del target | derivada del target o score de transparencia
+score_trazabilidad_base,columna derivada directa/indirectamente del target | derivada del target o score de transparencia
+transparency_score,columna derivada directa/indirectamente del target | derivada del target o score de transparencia
+flag_evidencia_competencia_suficiente,columna derivada directa/indirectamente del target | derivada del target o score de transparencia | resultado posterior a apertura/adjudicacion
+score_competencia,columna derivada directa/indirectamente del target | derivada del target o score de transparencia | resultado posterior a apertura/adjudicacion
+flag_id_proceso_valido,columna derivada directa/indirectamente del target | identificador con alto riesgo de memorizar registros
+flag_datos_competencia_disponibles,columna derivada directa/indirectamente del target | resultado posterior a apertura/adjudicacion
+flag_hubo_competencia_minima,columna derivada directa/indirectamente del target | resultado posterior a apertura/adjudicacion
+flag_hubo_participacion,columna derivada directa/indirectamente del target | resultado posterior a apertura/adjudicacion
+intensidad_competencia_normalizada,columna derivada directa/indirectamente del target | resultado posterior a apertura/adjudicacion
+evidence_coverage_v2,derivada del target o score de transparencia
+riesgo_baja_transparencia_v2,derivada del target o score de transparencia
+descripci_n_del_procedimiento,metadata granular o identificador no generalizable
+fecha_de_publicacion_del,metadata granular o identificador no generalizable
+fecha_de_recepcion_de,metadata granular o identificador no generalizable
+nombre_del_procedimiento,metadata granular o identificador no generalizable
+referencia_del_proceso,metadata granular o identificador no generalizable
+urlproceso,metadata granular o identificador no generalizable
+id_del_portafolio,metadata granular o identificador no generalizable | identificador con alto riesgo de memorizar registros
+id_del_proceso,metadata granular o identificador no generalizable | identificador con alto riesgo de memorizar registros
+fecha_de_apertura_de_respuesta,metadata granular o identificador no generalizable | resultado posterior a apertura/adjudicacion
+competencia_reportada,resultado posterior a apertura/adjudicacion
+conteo_de_respuestas_a_ofertas,resultado posterior a apertura/adjudicacion
+flag_sin_competencia_observada,resultado posterior a apertura/adjudicacion
+flag_tiene_fecha_apertura_respuesta,resultado posterior a apertura/adjudicacion
+intensidad_competencia_log,resultado posterior a apertura/adjudicacion
+proveedores_con_invitacion,resultado posterior a apertura/adjudicacion
+proveedores_invitados,resultado posterior a apertura/adjudicacion
+proveedores_unicos_con,resultado posterior a apertura/adjudicacion
+ratio_proveedores_vs_invitados,resultado posterior a apertura/adjudicacion
+respuestas_al_procedimiento,resultado posterior a apertura/adjudicacion
+respuestas_externas,resultado posterior a apertura/adjudicacion
+tiene_fecha_apertura_respuesta,resultado posterior a apertura/adjudicacion
+total_interes_oferentes,resultado posterior a apertura/adjudicacion
+total_respuestas,resultado posterior a apertura/adjudicacion
+visualizaciones_del,resultado posterior a apertura/adjudicacion

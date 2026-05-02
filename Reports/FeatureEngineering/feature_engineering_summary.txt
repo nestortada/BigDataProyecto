@@ -1,0 +1,61 @@
+RESUMEN FEATURE ENGINEERING SECOP II
+======================================================================
+
+Input parquet: C:\Users\nesto\OneDrive - Universidad de la Sabana\Universidad\2026-1\Big data\Proyecto\Data\Processed\Limpieza\datos_analisis_limpio.parquet
+Output parquet: C:\Users\nesto\OneDrive - Universidad de la Sabana\Universidad\2026-1\Big data\Proyecto\Data\Processed\Limpieza\datos_feature_engineering.parquet
+Reports dir: C:\Users\nesto\OneDrive - Universidad de la Sabana\Universidad\2026-1\Big data\Proyecto\Reports\FeatureEngineering
+Prefect disponible: True
+
+Filas procesadas: 429,541
+Columnas finales: 106
+Positivos legacy: 340,715
+Positivos v2: 1,484
+
+Features principales generados:
+- longitud_descripcion
+- flag_tiene_descripcion_util
+- flag_tiene_categoria
+- flag_tiene_precio_base
+- flag_tiene_ubicacion_entidad
+- flag_tiene_tipo_modalidad
+- missing_required_fields_count
+- flag_id_proceso_valido
+- flag_referencia_valida
+- flag_tiene_url_publica
+- penalizacion_duplicado
+- flag_portafolio_disponible
+- dias_publicacion_a_recepcion
+- dias_recepcion_a_apertura
+- dias_publicacion_a_apertura
+- total_respuestas
+- total_interes_oferentes
+- intensidad_competencia_normalizada
+
+Scores generados:
+- score_completitud
+- score_trazabilidad_base
+- score_trazabilidad
+- score_temporal
+- score_competencia
+- transparency_score
+
+Targets y metadatos de target generados:
+- riesgo_baja_transparencia
+- nivel_riesgo_transparencia
+- riesgo_baja_transparencia_v2
+- target_confidence_v2
+- evidence_coverage_v2
+- target_dimension_count_v2
+
+Reportes generados:
+- target_threshold_sensitivity.csv
+- target_v2_group_audit.csv
+- target_v2_warning_report.txt
+- target_v2_label_quality_report.txt
+- feature_engineering_summary.txt
+
+Estado PostgreSQL:
+- status: uploaded
+- rows_uploaded: 429541
+- table_name: secop_feature_engineering
+- detail: Carga completada.

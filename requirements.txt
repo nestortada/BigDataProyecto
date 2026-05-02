@@ -3,9 +3,12 @@ pandas
 prefect
 pyarrow
 scipy
+scikit-learn
+joblib
 matplotlib
 seaborn
 statsmodels
+openpyxl
 python-dotenv
 sodapy
 psycopg2-binary

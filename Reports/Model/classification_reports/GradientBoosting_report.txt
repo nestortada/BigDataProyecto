@@ -1,0 +1,19 @@
+Classification Report - GradientBoosting
+
+              precision    recall  f1-score   support
+
+           0       1.00      0.99      1.00     17765
+           1       1.00      1.00      1.00     68143
+
+    accuracy                           1.00     85908
+   macro avg       1.00      1.00      1.00     85908
+weighted avg       1.00      1.00      1.00     85908
+
+
+Reporte especifico clase positiva (riesgo=1):
+{
+  "precision": 0.9981681223987338,
+  "recall": 0.999530399307339,
+  "f1-score": 0.9988487963689424,
+  "support": 68143.0
+}

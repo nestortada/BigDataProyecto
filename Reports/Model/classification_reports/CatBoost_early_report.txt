@@ -1,0 +1,19 @@
+Classification Report - CatBoost_early
+
+              precision    recall  f1-score   support
+
+           0       0.97      0.97      0.97     17765
+           1       0.99      0.99      0.99     68143
+
+    accuracy                           0.99     85908
+   macro avg       0.98      0.98      0.98     85908
+weighted avg       0.99      0.99      0.99     85908
+
+
+Reporte especifico clase positiva (riesgo=1):
+{
+  "precision": 0.9924584776101883,
+  "recall": 0.9926478141555258,
+  "f1-score": 0.9925531368535352,
+  "support": 68143.0
+}

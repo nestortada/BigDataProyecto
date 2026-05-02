@@ -1,0 +1,18 @@
+column,matched_patterns,reason
+duracion,duracion,experimento estricto contra leakage temporal indirecto
+unidad_de_duracion,duracion,experimento estricto contra leakage temporal indirecto
+flag_precio_base_extremo,flag_,experimento estricto contra leakage temporal indirecto
+duracion_dias,duracion,experimento estricto contra leakage temporal indirecto
+duracion_improbable,duracion,experimento estricto contra leakage temporal indirecto
+unidad_de_duracion_desconocida,duracion,experimento estricto contra leakage temporal indirecto
+tiene_fecha_recepcion,fecha_|tiene_fecha,experimento estricto contra leakage temporal indirecto
+tiene_fecha_apertura_efectiva,fecha_|tiene_fecha,experimento estricto contra leakage temporal indirecto
+dias_hasta_recepcion,dias_,experimento estricto contra leakage temporal indirecto
+missing_temporal_count,temporal|missing_temporal,experimento estricto contra leakage temporal indirecto
+anomalia_temporal,temporal,experimento estricto contra leakage temporal indirecto
+dias_publicacion_a_recepcion,dias_,experimento estricto contra leakage temporal indirecto
+dias_recepcion_a_apertura,dias_,experimento estricto contra leakage temporal indirecto
+dias_publicacion_a_apertura,dias_,experimento estricto contra leakage temporal indirecto
+flag_tiene_fecha_publicacion,fecha_|tiene_fecha|flag_,experimento estricto contra leakage temporal indirecto
+flag_tiene_fecha_recepcion,fecha_|tiene_fecha|flag_,experimento estricto contra leakage temporal indirecto
+flag_incoherencia_temporal_observada,temporal|flag_,experimento estricto contra leakage temporal indirecto

@@ -1,0 +1,59 @@
+column,reason,correlation_with_target,abs_correlation_with_target,dropped
+flag_coherencia_temporal_global,columna derivada directa/indirectamente del target,-0.875347899295309,0.875347899295309,True
+flag_fechas_temporales_disponibles,columna derivada directa/indirectamente del target,-0.8849855208317918,0.8849855208317918,True
+flag_portafolio_disponible,columna derivada directa/indirectamente del target,,,True
+flag_publicacion_antes_recepcion,columna derivada directa/indirectamente del target,-0.9632572613330228,0.9632572613330228,True
+flag_recepcion_antes_apertura,columna derivada directa/indirectamente del target,-0.8849855208317918,0.8849855208317918,True
+flag_referencia_valida,columna derivada directa/indirectamente del target,-0.01587549493901278,0.01587549493901278,True
+flag_tiene_categoria,columna derivada directa/indirectamente del target,,,True
+flag_tiene_descripcion_util,columna derivada directa/indirectamente del target,-0.0029390351399720236,0.0029390351399720236,True
+flag_tiene_precio_base,columna derivada directa/indirectamente del target,0.10940054728939737,0.10940054728939737,True
+flag_tiene_tipo_modalidad,columna derivada directa/indirectamente del target,-0.018823540696987644,0.018823540696987644,True
+flag_tiene_ubicacion_entidad,columna derivada directa/indirectamente del target,-0.005492613410235154,0.005492613410235154,True
+flag_tiene_url_publica,columna derivada directa/indirectamente del target,,,True
+flag_ventana_apertura_razonable,columna derivada directa/indirectamente del target,-0.8806803475249946,0.8806803475249946,True
+flag_ventana_recepcion_razonable,columna derivada directa/indirectamente del target,-0.9629637852535333,0.9629637852535333,True
+missing_required_fields_count,columna derivada directa/indirectamente del target,-0.04039659270149867,0.04039659270149867,True
+penalizacion_duplicado,columna derivada directa/indirectamente del target,-0.16723977612403837,0.16723977612403837,True
+flag_evidencia_completitud_suficiente,columna derivada directa/indirectamente del target | derivada del target o score de transparencia,,,True
+flag_evidencia_temporal_suficiente,columna derivada directa/indirectamente del target | derivada del target o score de transparencia,-0.9631913792186284,0.9631913792186284,True
+flag_evidencia_trazabilidad_suficiente,columna derivada directa/indirectamente del target | derivada del target o score de transparencia,,,True
+nivel_riesgo_transparencia,columna derivada directa/indirectamente del target | derivada del target o score de transparencia,,,True
+score_completitud,columna derivada directa/indirectamente del target | derivada del target o score de transparencia,0.04783573169422748,0.04783573169422748,True
+score_temporal,columna derivada directa/indirectamente del target | derivada del target o score de transparencia,-0.9579326458436656,0.9579326458436656,True
+score_trazabilidad,columna derivada directa/indirectamente del target | derivada del target o score de transparencia,0.1444044728046648,0.1444044728046648,True
+score_trazabilidad_base,columna derivada directa/indirectamente del target | derivada del target o score de transparencia,-0.015875494939012545,0.015875494939012545,True
+transparency_score,columna derivada directa/indirectamente del target | derivada del target o score de transparencia,-0.9378087089675806,0.9378087089675806,True
+flag_evidencia_competencia_suficiente,columna derivada directa/indirectamente del target | derivada del target o score de transparencia | resultado posterior a apertura/adjudicacion,,,True
+score_competencia,columna derivada directa/indirectamente del target | derivada del target o score de transparencia | resultado posterior a apertura/adjudicacion,-0.758445290773464,0.758445290773464,True
+flag_id_proceso_valido,columna derivada directa/indirectamente del target | identificador con alto riesgo de memorizar registros,,,True
+flag_datos_competencia_disponibles,columna derivada directa/indirectamente del target | resultado posterior a apertura/adjudicacion,,,True
+flag_hubo_competencia_minima,columna derivada directa/indirectamente del target | resultado posterior a apertura/adjudicacion,-0.5674131280033768,0.5674131280033768,True
+flag_hubo_participacion,columna derivada directa/indirectamente del target | resultado posterior a apertura/adjudicacion,-0.8078481197884031,0.8078481197884031,True
+intensidad_competencia_normalizada,columna derivada directa/indirectamente del target | resultado posterior a apertura/adjudicacion,-0.7578115313978214,0.7578115313978214,True
+evidence_coverage_v2,derivada del target o score de transparencia,-0.9631913792186283,0.9631913792186283,True
+riesgo_baja_transparencia_v2,derivada del target o score de transparencia,0.030063571625883554,0.030063571625883554,True
+descripci_n_del_procedimiento,metadata granular o identificador no generalizable,,,True
+fecha_de_publicacion_del,metadata granular o identificador no generalizable,,,True
+fecha_de_recepcion_de,metadata granular o identificador no generalizable,,,True
+nombre_del_procedimiento,metadata granular o identificador no generalizable,,,True
+referencia_del_proceso,metadata granular o identificador no generalizable,,,True
+urlproceso,metadata granular o identificador no generalizable,,,True
+id_del_portafolio,metadata granular o identificador no generalizable | identificador con alto riesgo de memorizar registros,,,True
+id_del_proceso,metadata granular o identificador no generalizable | identificador con alto riesgo de memorizar registros,,,True
+fecha_de_apertura_de_respuesta,metadata granular o identificador no generalizable | resultado posterior a apertura/adjudicacion,,,True
+competencia_reportada,resultado posterior a apertura/adjudicacion,-0.8078481197884031,0.8078481197884031,True
+conteo_de_respuestas_a_ofertas,resultado posterior a apertura/adjudicacion,-0.06187360562142738,0.06187360562142738,True
+flag_sin_competencia_observada,resultado posterior a apertura/adjudicacion,0.8078481197884031,0.8078481197884031,True
+flag_tiene_fecha_apertura_respuesta,resultado posterior a apertura/adjudicacion,-0.8849855208317918,0.8849855208317918,True
+intensidad_competencia_log,resultado posterior a apertura/adjudicacion,-0.7334353625122861,0.7334353625122861,True
+proveedores_con_invitacion,resultado posterior a apertura/adjudicacion,-0.13107584851145224,0.13107584851145224,True
+proveedores_invitados,resultado posterior a apertura/adjudicacion,-0.12109864547592196,0.12109864547592196,True
+proveedores_unicos_con,resultado posterior a apertura/adjudicacion,-0.30725715698761885,0.30725715698761885,True
+ratio_proveedores_vs_invitados,resultado posterior a apertura/adjudicacion,-0.34253192790529957,0.34253192790529957,True
+respuestas_al_procedimiento,resultado posterior a apertura/adjudicacion,-0.31199785675815067,0.31199785675815067,True
+respuestas_externas,resultado posterior a apertura/adjudicacion,-0.0848687183202585,0.0848687183202585,True
+tiene_fecha_apertura_respuesta,resultado posterior a apertura/adjudicacion,-0.8849855208317918,0.8849855208317918,True
+total_interes_oferentes,resultado posterior a apertura/adjudicacion,-0.27135504721781334,0.27135504721781334,True
+total_respuestas,resultado posterior a apertura/adjudicacion,-0.3136993553429146,0.3136993553429146,True
+visualizaciones_del,resultado posterior a apertura/adjudicacion,-0.45839513454213904,0.45839513454213904,True

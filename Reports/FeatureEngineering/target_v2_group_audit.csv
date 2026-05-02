@@ -1,0 +1,79 @@
+group_variable,group_value,total,positivos,negativos,tasa_positiva
+departamento_entidad,Guaviare,305,4,301,0.013115
+departamento_entidad,Sin informacion,7735,98,7637,0.01267
+departamento_entidad,Distrito Capital de Bogotá,146525,1032,145493,0.007043
+departamento_entidad,Caldas,8096,33,8063,0.004076
+departamento_entidad,Valle del Cauca,45286,123,45163,0.002716
+departamento_entidad,Putumayo,2440,6,2434,0.002459
+departamento_entidad,Tolima,10705,24,10681,0.002242
+departamento_entidad,Cauca,6529,14,6515,0.002144
+departamento_entidad,Caquetá,2061,4,2057,0.001941
+departamento_entidad,La Guajira,1919,3,1916,0.001563
+departamento_entidad,Santander,20076,30,20046,0.001494
+departamento_entidad,Arauca,2856,3,2853,0.00105
+departamento_entidad,Cesar,3886,4,3882,0.001029
+departamento_entidad,Antioquia,51121,51,51070,0.000998
+departamento_entidad,Huila,6184,6,6178,0.00097
+departamento_entidad,Cundinamarca,15045,14,15031,0.000931
+departamento_entidad,Casanare,5387,4,5383,0.000743
+departamento_entidad,Norte de Santander,10546,6,10540,0.000569
+departamento_entidad,Chocó,1775,1,1774,0.000563
+departamento_entidad,Córdoba,1944,1,1943,0.000514
+departamento_entidad,Boyacá,7953,4,7949,0.000503
+departamento_entidad,"San Andrés, Providencia y Santa Catalina",4123,2,4121,0.000485
+departamento_entidad,Magdalena,5208,2,5206,0.000384
+departamento_entidad,Quindío,8643,3,8640,0.000347
+departamento_entidad,Meta,10094,3,10091,0.000297
+departamento_entidad,Bolívar,10257,3,10254,0.000292
+departamento_entidad,Risaralda,8413,2,8411,0.000238
+departamento_entidad,Sucre,4570,1,4569,0.000219
+departamento_entidad,Atlántico,11890,2,11888,0.000168
+departamento_entidad,Nariño,6943,1,6942,0.000144
+departamento_entidad,Amazonas,346,0,346,0.0
+departamento_entidad,Vichada,322,0,322,0.0
+departamento_entidad,Guainía,242,0,242,0.0
+departamento_entidad,Vaupés,116,0,116,0.0
+modalidad_de_contratacion,Contratación régimen especial,51367,949,50418,0.018475
+modalidad_de_contratacion,Solicitud de información a los Proveedores,12905,229,12676,0.017745
+modalidad_de_contratacion,Contratación directa,283364,305,283059,0.001076
+modalidad_de_contratacion,Contratación Directa (con ofertas),8484,1,8483,0.000118
+modalidad_de_contratacion,Mínima cuantía,33858,0,33858,0.0
+modalidad_de_contratacion,Selección Abreviada de Menor Cuantía,18712,0,18712,0.0
+modalidad_de_contratacion,Selección abreviada subasta inversa,9140,0,9140,0.0
+modalidad_de_contratacion,Contratación régimen especial (con ofertas),3559,0,3559,0.0
+modalidad_de_contratacion,Concurso de méritos abierto,2488,0,2488,0.0
+modalidad_de_contratacion,Licitación pública,2428,0,2428,0.0
+modalidad_de_contratacion,Licitación pública Obra Publica,2202,0,2202,0.0
+modalidad_de_contratacion,Subasta de prueba,583,0,583,0.0
+modalidad_de_contratacion,Seleccion Abreviada Menor Cuantia Sin Manifestacion Interes,324,0,324,0.0
+modalidad_de_contratacion,Enajenación de bienes con sobre cerrado,45,0,45,0.0
+modalidad_de_contratacion,Licitación Pública Acuerdo Marco de Precios,42,0,42,0.0
+modalidad_de_contratacion,Enajenación de bienes con subasta,39,0,39,0.0
+modalidad_de_contratacion,Concurso de méritos con precalificación,1,0,1,0.0
+ordenentidad,Territorial,268565,1217,267348,0.004531
+ordenentidad,Nacional,152003,258,151745,0.001697
+ordenentidad,Corporación Autónoma,8973,9,8964,0.001003
+tipo_de_contrato,Decreto 092 de 2017,17152,822,16330,0.047924
+tipo_de_contrato,No,12905,229,12676,0.017745
+tipo_de_contrato,Operaciones de Crédito Público,257,3,254,0.011673
+tipo_de_contrato,Arrendamiento de inmuebles,4167,30,4137,0.007199
+tipo_de_contrato,Comodato,1671,8,1663,0.004788
+tipo_de_contrato,Otro,26147,63,26084,0.002409
+tipo_de_contrato,Suministros,19759,27,19732,0.001366
+tipo_de_contrato,Prestación de servicios,312293,287,312006,0.000919
+tipo_de_contrato,Compraventa,18789,11,18778,0.000585
+tipo_de_contrato,Obra,10165,4,10161,0.000394
+tipo_de_contrato,Interventoría,1853,0,1853,0.0
+tipo_de_contrato,Consultoría,1640,0,1640,0.0
+tipo_de_contrato,Seguros,1261,0,1261,0.0
+tipo_de_contrato,Sin informacion,583,0,583,0.0
+tipo_de_contrato,Arrendamiento de muebles,467,0,467,0.0
+tipo_de_contrato,Servicios financieros,147,0,147,0.0
+tipo_de_contrato,Negocio fiduciario,59,0,59,0.0
+tipo_de_contrato,Venta muebles,57,0,57,0.0
+tipo_de_contrato,Acuerdo Marco de Precios,42,0,42,0.0
+tipo_de_contrato,Asociación Público Privada,38,0,38,0.0
+tipo_de_contrato,Concesión,35,0,35,0.0
+tipo_de_contrato,Venta inmuebles,27,0,27,0.0
+tipo_de_contrato,Comisión,26,0,26,0.0
+tipo_de_contrato,Acuerdo de cooperación,1,0,1,0.0

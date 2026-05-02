@@ -1,0 +1,91 @@
+column,reason,matched_pattern,allowed_early_feature
+codigo_pci,no pertenece a la lista de variables tempranas permitidas,,False
+id_del_proceso,no pertenece a la lista de variables tempranas permitidas | patron prohibido: id_del_proceso,id_del_proceso,False
+referencia_del_proceso,no pertenece a la lista de variables tempranas permitidas | patron prohibido: referencia_del_proceso,referencia_del_proceso,False
+id_del_portafolio,no pertenece a la lista de variables tempranas permitidas | patron prohibido: id_del_portafolio,id_del_portafolio,False
+fecha_de_publicacion_del,no pertenece a la lista de variables tempranas permitidas,,False
+duracion,no pertenece a la lista de variables tempranas permitidas | patron prohibido: duracion,duracion,False
+unidad_de_duracion,no pertenece a la lista de variables tempranas permitidas | patron prohibido: duracion,duracion,False
+fecha_de_recepcion_de,no pertenece a la lista de variables tempranas permitidas,,False
+fecha_de_apertura_de_respuesta,no pertenece a la lista de variables tempranas permitidas,,False
+ciudad_de_la_unidad_de,no pertenece a la lista de variables tempranas permitidas,,False
+nombre_de_la_unidad_de,no pertenece a la lista de variables tempranas permitidas,,False
+proveedores_invitados,no pertenece a la lista de variables tempranas permitidas | patron prohibido: proveedores,proveedores,False
+proveedores_con_invitacion,no pertenece a la lista de variables tempranas permitidas | patron prohibido: proveedores,proveedores,False
+visualizaciones_del,no pertenece a la lista de variables tempranas permitidas | patron prohibido: visualizaciones,visualizaciones,False
+respuestas_al_procedimiento,no pertenece a la lista de variables tempranas permitidas | patron prohibido: respuestas,respuestas,False
+respuestas_externas,no pertenece a la lista de variables tempranas permitidas | patron prohibido: respuestas,respuestas,False
+conteo_de_respuestas_a_ofertas,no pertenece a la lista de variables tempranas permitidas | patron prohibido: conteo|respuestas,conteo|respuestas,False
+proveedores_unicos_con,no pertenece a la lista de variables tempranas permitidas | patron prohibido: proveedores,proveedores,False
+numero_de_lotes,no pertenece a la lista de variables tempranas permitidas,,False
+urlproceso,no pertenece a la lista de variables tempranas permitidas | patron prohibido: urlproceso,urlproceso,False
+codigo_entidad,no pertenece a la lista de variables tempranas permitidas,,False
+precio_base_es_cero,no pertenece a la lista de variables tempranas permitidas,,False
+flag_precio_base_extremo,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag,flag,False
+duracion_dias,no pertenece a la lista de variables tempranas permitidas | patron prohibido: duracion|dias,duracion|dias,False
+duracion_improbable,no pertenece a la lista de variables tempranas permitidas | patron prohibido: duracion,duracion,False
+unidad_de_duracion_desconocida,no pertenece a la lista de variables tempranas permitidas | patron prohibido: duracion,duracion,False
+tiene_descripcion,no pertenece a la lista de variables tempranas permitidas | patron prohibido: tiene_,tiene_,False
+tiene_urlproceso,no pertenece a la lista de variables tempranas permitidas | patron prohibido: urlproceso|tiene_,urlproceso|tiene_,False
+tiene_categorias_adicionales,no pertenece a la lista de variables tempranas permitidas | patron prohibido: tiene_,tiene_,False
+ausencia_geografica,no pertenece a la lista de variables tempranas permitidas,,False
+tiene_fecha_recepcion,no pertenece a la lista de variables tempranas permitidas | patron prohibido: tiene_,tiene_,False
+tiene_fecha_apertura_respuesta,no pertenece a la lista de variables tempranas permitidas | patron prohibido: tiene_,tiene_,False
+tiene_fecha_apertura_efectiva,no pertenece a la lista de variables tempranas permitidas | patron prohibido: tiene_,tiene_,False
+dias_hasta_recepcion,no pertenece a la lista de variables tempranas permitidas | patron prohibido: dias,dias,False
+anomalia_apertura_antes_recepcion,no pertenece a la lista de variables tempranas permitidas | patron prohibido: anomalia,anomalia,False
+missing_temporal_count,no pertenece a la lista de variables tempranas permitidas | patron prohibido: temporal|missing|count,temporal|missing|count,False
+anomalia_temporal,no pertenece a la lista de variables tempranas permitidas | patron prohibido: temporal|anomalia,temporal|anomalia,False
+competencia_reportada,no pertenece a la lista de variables tempranas permitidas | patron prohibido: competencia,competencia,False
+intensidad_competencia_log,no pertenece a la lista de variables tempranas permitidas | patron prohibido: competencia,competencia,False
+ratio_proveedores_vs_invitados,no pertenece a la lista de variables tempranas permitidas | patron prohibido: ratio|proveedores,ratio|proveedores,False
+completitud_critica,no pertenece a la lista de variables tempranas permitidas | patron prohibido: completitud,completitud,False
+fue_duplicado_exacto,no pertenece a la lista de variables tempranas permitidas,,False
+fue_duplicado_logico,no pertenece a la lista de variables tempranas permitidas,,False
+longitud_descripcion,no pertenece a la lista de variables tempranas permitidas,,False
+flag_tiene_descripcion_util,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_,flag|tiene_,False
+flag_tiene_categoria,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_,flag|tiene_,False
+flag_tiene_precio_base,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_,flag|tiene_,False
+flag_tiene_ubicacion_entidad,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_,flag|tiene_,False
+flag_tiene_tipo_modalidad,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_,flag|tiene_,False
+missing_required_fields_count,no pertenece a la lista de variables tempranas permitidas | patron prohibido: missing|count,missing|count,False
+flag_id_proceso_valido,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag,flag,False
+flag_referencia_valida,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag,flag,False
+flag_tiene_url_publica,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_,flag|tiene_,False
+penalizacion_duplicado,no pertenece a la lista de variables tempranas permitidas,,False
+flag_portafolio_disponible,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag,flag,False
+dias_publicacion_a_recepcion,no pertenece a la lista de variables tempranas permitidas | patron prohibido: dias,dias,False
+dias_recepcion_a_apertura,no pertenece a la lista de variables tempranas permitidas | patron prohibido: dias,dias,False
+dias_publicacion_a_apertura,no pertenece a la lista de variables tempranas permitidas | patron prohibido: dias,dias,False
+flag_tiene_fecha_publicacion,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_,flag|tiene_,False
+flag_tiene_fecha_recepcion,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_,flag|tiene_,False
+flag_tiene_fecha_apertura_respuesta,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag|tiene_,flag|tiene_,False
+flag_fechas_temporales_disponibles,no pertenece a la lista de variables tempranas permitidas | patron prohibido: temporal|flag,temporal|flag,False
+flag_publicacion_antes_recepcion,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag,flag,False
+flag_recepcion_antes_apertura,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag,flag,False
+flag_ventana_recepcion_razonable,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag,flag,False
+flag_ventana_apertura_razonable,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag,flag,False
+flag_incoherencia_temporal_observada,no pertenece a la lista de variables tempranas permitidas | patron prohibido: temporal|coherencia|flag,temporal|coherencia|flag,False
+flag_coherencia_temporal_global,no pertenece a la lista de variables tempranas permitidas | patron prohibido: temporal|coherencia|flag,temporal|coherencia|flag,False
+total_respuestas,no pertenece a la lista de variables tempranas permitidas | patron prohibido: total|respuestas,total|respuestas,False
+total_interes_oferentes,no pertenece a la lista de variables tempranas permitidas | patron prohibido: total,total,False
+flag_datos_competencia_disponibles,no pertenece a la lista de variables tempranas permitidas | patron prohibido: competencia|flag,competencia|flag,False
+flag_hubo_participacion,no pertenece a la lista de variables tempranas permitidas | patron prohibido: flag,flag,False
+flag_hubo_competencia_minima,no pertenece a la lista de variables tempranas permitidas | patron prohibido: competencia|flag,competencia|flag,False
+flag_sin_competencia_observada,no pertenece a la lista de variables tempranas permitidas | patron prohibido: competencia|flag,competencia|flag,False
+intensidad_competencia_normalizada,no pertenece a la lista de variables tempranas permitidas | patron prohibido: competencia,competencia,False
+score_completitud,no pertenece a la lista de variables tempranas permitidas | patron prohibido: score|completitud,score|completitud,False
+score_trazabilidad_base,no pertenece a la lista de variables tempranas permitidas | patron prohibido: score|trazabilidad,score|trazabilidad,False
+score_trazabilidad,no pertenece a la lista de variables tempranas permitidas | patron prohibido: score|trazabilidad,score|trazabilidad,False
+score_temporal,no pertenece a la lista de variables tempranas permitidas | patron prohibido: score|temporal,score|temporal,False
+score_competencia,no pertenece a la lista de variables tempranas permitidas | patron prohibido: score|competencia,score|competencia,False
+transparency_score,no pertenece a la lista de variables tempranas permitidas | patron prohibido: score|transparency,score|transparency,False
+nivel_riesgo_transparencia,no pertenece a la lista de variables tempranas permitidas | patron prohibido: riesgo,riesgo,False
+flag_evidencia_completitud_suficiente,no pertenece a la lista de variables tempranas permitidas | patron prohibido: completitud|flag,completitud|flag,False
+flag_evidencia_trazabilidad_suficiente,no pertenece a la lista de variables tempranas permitidas | patron prohibido: trazabilidad|flag,trazabilidad|flag,False
+flag_evidencia_temporal_suficiente,no pertenece a la lista de variables tempranas permitidas | patron prohibido: temporal|flag,temporal|flag,False
+flag_evidencia_competencia_suficiente,no pertenece a la lista de variables tempranas permitidas | patron prohibido: competencia|flag,competencia|flag,False
+target_dimension_count_v2,no pertenece a la lista de variables tempranas permitidas | patron prohibido: count,count,False
+evidence_coverage_v2,no pertenece a la lista de variables tempranas permitidas | patron prohibido: evidence|coverage,evidence|coverage,False
+riesgo_baja_transparencia_v2,no pertenece a la lista de variables tempranas permitidas | patron prohibido: riesgo,riesgo,False
+target_confidence_v2,no pertenece a la lista de variables tempranas permitidas,,False

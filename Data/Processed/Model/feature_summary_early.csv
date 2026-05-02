@@ -1,0 +1,17 @@
+feature,type
+entidad,string
+nit_entidad,string
+departamento_entidad,string
+ciudad_entidad,string
+ordenentidad,string
+nombre_del_procedimiento,string
+descripci_n_del_procedimiento,string
+fase,string
+precio_base,float64
+modalidad_de_contratacion,string
+justificaci_n_modalidad_de,string
+codigo_principal_de_categoria,string
+tipo_de_contrato,string
+categorias_adicionales,string
+precio_base_log,float64
+riesgo_baja_transparencia,int8
