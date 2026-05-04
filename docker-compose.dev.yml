@@ -1,0 +1,16 @@
+services:
+  api:
+    command:
+      - uvicorn
+      - Code.Operationalization.secop_fastapi.main:app
+      - --reload
+      - --reload-dir
+      - Code/Operationalization/secop_fastapi
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8000"
+    volumes:
+      - ./Code:/app/Code
+      - ./Models/trained/all_models/RandomForest_early_pipeline.joblib:/app/Models/trained/all_models/RandomForest_early_pipeline.joblib:ro
+      - ./Reports/Model/feature_importance/RandomForest_early_fi.csv:/app/Reports/Model/feature_importance/RandomForest_early_fi.csv:ro

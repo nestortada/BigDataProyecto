@@ -4,13 +4,59 @@ services:
     container_name: docker_postgres
     restart: unless-stopped
     environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER:-secop}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-secop_password}
+      POSTGRES_DB: ${POSTGRES_DB:-secop}
     ports:
-      - "${POSTGRES_PORT}:5432"
+      - "${POSTGRES_PORT:-5432}:5432"
     volumes:
       - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-secop} -d ${POSTGRES_DB:-secop}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: secop-fastapi:latest
+    container_name: secop_fastapi
+    restart: unless-stopped
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: ${POSTGRES_DB:-secop}
+      POSTGRES_USER: ${POSTGRES_USER:-secop}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-secop_password}
+    ports:
+      - "${API_PORT:-8000}:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  secop-db-load:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: secop-fastapi:latest
+    profiles:
+      - jobs
+    container_name: secop_db_load
+    restart: "no"
+    command: ["python", "Code/Operationalization/postgres_carga_datos.py"]
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: ${POSTGRES_DB:-secop}
+      POSTGRES_USER: ${POSTGRES_USER:-secop}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-secop_password}
+    volumes:
+      - ./Data:/app/Data
+    depends_on:
+      postgres:
+        condition: service_healthy
 
 volumes:
   pg_data:

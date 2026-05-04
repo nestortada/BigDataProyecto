@@ -26,6 +26,32 @@ Luego abrir:
 http://127.0.0.1:8000
 ```
 
+## Ejecucion con Docker
+
+Desde la raiz del proyecto:
+
+```bash
+docker compose up --build
+```
+
+Luego abrir:
+
+```text
+http://127.0.0.1:8000
+```
+
+Para desarrollo con recarga automatica:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+```
+
+Para cargar el parquet raw en PostgreSQL desde el contenedor:
+
+```bash
+docker compose --profile jobs run --rm secop-db-load
+```
+
 ## Endpoints
 
 - `GET /`: formulario web.
