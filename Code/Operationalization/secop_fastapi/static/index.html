@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>SECOP Transparencia Temprana - Analisis de Riesgo</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+    body { font-family: 'Public Sans', sans-serif; }
+  </style>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary-fixed": "#fadfb8",
+            "on-tertiary-container": "#a38c6a",
+            "on-background": "#1b1b1d",
+            "on-secondary": "#ffffff",
+            "surface-tint": "#545f73",
+            "surface-dim": "#dcd9db",
+            "outline": "#75777d",
+            "tertiary": "#1e1200",
+            "on-primary-fixed": "#111c2d",
+            "surface-container-highest": "#e4e2e3",
+            "on-primary-fixed-variant": "#3c475a",
+            "secondary-container": "#d0e1fb",
+            "on-secondary-fixed-variant": "#38485d",
+            "on-error-container": "#93000a",
+            "on-secondary-container": "#54647a",
+            "surface-container": "#f0edef",
+            "on-primary-container": "#8590a6",
+            "surface-container-lowest": "#ffffff",
+            "surface": "#fbf8fa",
+            "primary": "#091426",
+            "secondary": "#505f76",
+            "background": "#fbf8fa",
+            "tertiary-container": "#35260c",
+            "primary-fixed-dim": "#bcc7de",
+            "tertiary-fixed-dim": "#ddc39d",
+            "on-primary": "#ffffff",
+            "on-surface": "#1b1b1d",
+            "surface-bright": "#fbf8fa",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed": "#0b1c30",
+            "outline-variant": "#c5c6cd",
+            "on-tertiary-fixed-variant": "#564427",
+            "inverse-primary": "#bcc7de",
+            "surface-container-low": "#f5f3f4",
+            "on-tertiary-fixed": "#271902",
+            "primary-container": "#1e293b",
+            "surface-container-high": "#eae7e9",
+            "on-error": "#ffffff",
+            "primary-fixed": "#d8e3fb",
+            "error-container": "#ffdad6",
+            "surface-variant": "#e4e2e3",
+            "error": "#ba1a1a",
+            "on-surface-variant": "#45474c",
+            "secondary-fixed": "#d3e4fe",
+            "secondary-fixed-dim": "#b7c8e1",
+            "inverse-surface": "#303032",
+            "inverse-on-surface": "#f3f0f2"
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem"
+          },
+          fontFamily: {
+            "body-md": ["Public Sans"],
+            "h3": ["Public Sans"],
+            "h1": ["Public Sans"],
+            "label-caps": ["Public Sans"],
+            "h2": ["Public Sans"],
+            "body-sm": ["Public Sans"],
+            "data-mono": ["Inter"]
+          },
+          fontSize: {
+            "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}],
+            "h3": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}],
+            "h1": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+            "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+            "h2": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "body-sm": ["13px", {"lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400"}],
+            "data-mono": ["13px", {"lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500"}]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#F8FAFC] text-on-surface antialiased min-h-screen">
+  <header class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center w-full px-6 h-16 sticky top-0 z-50">
+    <div class="flex items-center gap-8">
+      <h1 class="text-lg font-black text-[#1E293B] dark:text-white tracking-tighter uppercase">SECOP Transparencia Temprana</h1>
+      <nav class="hidden md:flex gap-6 items-end h-full">
+        <a class="font-public-sans text-sm font-medium tracking-tight text-[#1E293B] dark:text-white border-b-2 border-[#1E293B] dark:border-slate-100 pb-4 mt-1" href="#">Analisis</a>
+        <a class="font-public-sans text-sm font-medium tracking-tight text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 pb-4" href="#">Historial</a>
+        <a class="font-public-sans text-sm font-medium tracking-tight text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 pb-4" href="#">Alertas</a>
+        <a class="font-public-sans text-sm font-medium tracking-tight text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 pb-4" href="#">Normatividad</a>
+      </nav>
+    </div>
+    <div class="flex items-center gap-4">
+      <button class="material-symbols-outlined text-slate-500 hover:bg-slate-50 p-2 rounded-lg transition-colors">notifications</button>
+      <button class="material-symbols-outlined text-slate-500 hover:bg-slate-50 p-2 rounded-lg transition-colors">help_outline</button>
+      <button class="material-symbols-outlined text-slate-500 hover:bg-slate-50 p-2 rounded-lg transition-colors">account_circle</button>
+    </div>
+  </header>
+
+  <div class="flex">
+    <aside class="hidden lg:flex flex-col fixed left-0 top-16 h-[calc(100vh-64px)] w-64 bg-[#F8FAFC] dark:bg-slate-950 border-r border-slate-200 dark:border-slate-800 py-8 px-4">
+      <div class="mb-8 px-2">
+        <h2 class="text-sm font-bold text-[#1E293B] dark:text-white">Modulo de Control</h2>
+        <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold mt-1">Analista de Datos v2.1</p>
+      </div>
+      <nav class="flex-1 space-y-1">
+        <a class="flex items-center gap-3 px-3 py-2 bg-white dark:bg-slate-900 text-[#1E293B] dark:text-white border-r-4 border-[#1E293B] dark:border-slate-100 shadow-sm font-public-sans text-xs font-semibold uppercase tracking-wider transition-all translate-x-1" href="#">
+          <span class="material-symbols-outlined">add_chart</span>
+          <span>Nuevo Analisis</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 font-public-sans text-xs font-semibold uppercase tracking-wider transition-all" href="#">
+          <span class="material-symbols-outlined">dashboard</span>
+          <span>Dashboard Riesgos</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 font-public-sans text-xs font-semibold uppercase tracking-wider transition-all" href="#">
+          <span class="material-symbols-outlined">warning</span>
+          <span>Entidades Criticas</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 font-public-sans text-xs font-semibold uppercase tracking-wider transition-all" href="#">
+          <span class="material-symbols-outlined">settings</span>
+          <span>Configuracion</span>
+        </a>
+      </nav>
+      <div class="mt-auto pt-6 space-y-1">
+        <button class="w-full mb-4 bg-primary-container text-white py-2 px-4 text-xs font-bold uppercase tracking-widest hover:opacity-90 transition-all">Generar Reporte PDF</button>
+        <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 font-public-sans text-xs font-semibold uppercase tracking-wider" href="#">
+          <span class="material-symbols-outlined">support_agent</span>
+          <span>Soporte Tecnico</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 font-public-sans text-xs font-semibold uppercase tracking-wider" href="#">
+          <span class="material-symbols-outlined">logout</span>
+          <span>Cerrar Sesion</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="lg:ml-64 flex-1 p-4 sm:p-8 grid grid-cols-1 xl:grid-cols-12 gap-6 items-start">
+      <section class="xl:col-span-8 bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm">
+        <div class="px-6 py-4 border-b border-slate-100 bg-slate-50/50">
+          <h2 class="font-h2 text-primary flex items-center gap-2 uppercase tracking-tight">
+            <span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">analytics</span>
+            Nuevo Analisis de Probabilidad de Riesgo
+          </h2>
+        </div>
+
+        <form id="prediction-form" class="p-6 space-y-8">
+          <div id="form-error" class="hidden p-4 bg-red-50 border border-red-100 rounded-lg text-sm text-red-800"></div>
+
+          <div class="space-y-4">
+            <h3 class="font-label-caps text-slate-400 border-l-4 border-primary pl-3">1. INFORMACION DE LA ENTIDAD</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <label class="space-y-1">
+                <span class="block font-label-caps text-slate-600">Entidad contratante</span>
+                <input name="entidad" required class="w-full border-slate-200 focus:border-primary-container focus:ring-0 text-body-md rounded-lg" placeholder="Ej: Alcaldía Mayor de Bogotá" type="text" />
+              </label>
+              <label class="space-y-1">
+                <span class="block font-label-caps text-slate-600">NIT</span>
+                <input name="nit_entidad" required class="w-full border-slate-200 focus:border-primary-container focus:ring-0 text-body-md rounded-lg font-data-mono" placeholder="800.000.000-0" type="text" />
+              </label>
+              <label class="space-y-1">
+                <span class="block font-label-caps text-slate-600">Departamento</span>
+                <select name="departamento_entidad" required class="w-full border-slate-200 focus:border-primary-container focus:ring-0 text-body-md rounded-lg">
+                  <option value="">Seleccione departamento...</option>
+                  <option>Distrito Capital de Bogotá</option>
+                  <option>Antioquia</option>
+                  <option>Valle del Cauca</option>
+                  <option>Santander</option>
+                  <option>Cundinamarca</option>
+                  <option>Atlántico</option>
+                  <option>Tolima</option>
+                  <option>Norte de Santander</option>
+                  <option>Bolívar</option>
+                  <option>Meta</option>
+                </select>
+              </label>
+              <label class="space-y-1">
+                <span class="block font-label-caps text-slate-600">Ciudad</span>
+                <input name="ciudad_entidad" required class="w-full border-slate-200 focus:border-primary-container focus:ring-0 text-body-md rounded-lg" placeholder="Ej: Bogotá" type="text" />
+              </label>
+              <label class="md:col-span-2 space-y-1">
+                <span class="block font-label-caps text-slate-600">Orden de entidad</span>
+                <select name="ordenentidad" required class="w-full border-slate-200 focus:border-primary-container focus:ring-0 text-body-md rounded-lg">
+                  <option>Territorial</option>
+                  <option>Nacional</option>
+                  <option>Corporación Autónoma</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="font-label-caps text-slate-400 border-l-4 border-primary pl-3">2. DETALLES DEL PROCEDIMIENTO</h3>
+            <label class="block space-y-1">
+              <span class="block font-label-caps text-slate-600">Nombre del procedimiento</span>
+              <input name="nombre_del_procedimiento" required class="w-full border-slate-200 focus:border-primary-container focus:ring-0 text-body-md rounded-lg" placeholder="Ej: Adquisicion de mobiliario escolar" type="text" />
+            </label>
+            <label class="block space-y-1">
+              <span class="block font-label-caps text-slate-600">Descripcion</span>
+              <textarea name="descripci_n_del_procedimiento" required class="w-full border-slate-200 focus:border-primary-container focus:ring-0 text-body-md rounded-lg resize-none" rows="3"></textarea>
+            </label>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="font-label-caps text-slate-400 border-l-4 border-primary pl-3">3. CLASIFICACION TECNICA</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <label class="space-y-1">
+                <span class="block font-label-caps text-slate-600">Fase</span>
+                <select name="fase" required class="w-full border-slate-200 focus:border-primary-container focus:ring-0 text-body-md rounded-lg">
+                  <option>Presentación de oferta</option>
+                  <option>Fase de ofertas</option>
+                  <option>Presentación de observaciones</option>
+                  <option>Manifestación de interés (Menor Cuantía)</option>
+                  <option>Fase de Selección (Presentación de ofertas)</option>
+                </select>
+              </label>
+              <label class="space-y-1">
+                <span class="block font-label-caps text-slate-600">Modalidad de contratacion</span>
+                <select name="modalidad_de_contratacion" required class="w-full border-slate-200 focus:border-primary-container focus:ring-0 text-body-md rounded-lg">
+                  <option>Contratación directa</option>
+                  <option>Contratación régimen especial</option>
+                  <option>Mínima cuantía</option>
+                  <option>Selección Abreviada de Menor Cuantía</option>
+                  <option>Solicitud de información a los Proveedores</option>
+                  <option>Selección abreviada subasta inversa</option>
+                  <option>Licitación pública</option>
+                </select>
+              </label>
+              <label class="md:col-span-2 space-y-1">
+                <span class="block font-label-caps text-slate-600">Justificacion de modalidad</span>
+                <select name="justificaci_n_modalidad_de" required class="w-full border-slate-200 focus:border-primary-container focus:ring-0 text-body-md rounded-lg">
+                  <option>Servicios profesionales y apoyo a la gestión</option>
+                  <option>Regla aplicable</option>
+                  <option>Presupuesto inferior al 10% de la menor cuantía</option>
+                  <option>Decreto 092 de 2017</option>
+                  <option>Contratos o convenios Interadministrativos (valor cero)</option>
+                  <option>Suministro de bienes y servicios de características técnicas uniformes y común utilización</option>
+                  <option>Arrendamiento de inmuebles</option>
+                  <option>No existe pluralidad de oferentes en el mercado</option>
+                </select>
+              </label>
+              <label class="space-y-1">
+                <span class="block font-label-caps text-slate-600">Codigo principal de categoria (UNSPSC)</span>
+                <input name="codigo_principal_de_categoria" required class="w-full border-slate-200 focus:border-primary-container focus:ring-0 text-body-md rounded-lg font-data-mono" placeholder="Ej: 80101500" type="text" />
+              </label>
+              <label class="space-y-1">
+                <span class="block font-label-caps text-slate-600">Tipo de contrato</span>
+                <select name="tipo_de_contrato" required class="w-full border-slate-200 focus:border-primary-container focus:ring-0 text-body-md rounded-lg">
+                  <option>Prestación de servicios</option>
+                  <option>Otro</option>
+                  <option>Suministros</option>
+                  <option>Compraventa</option>
+                  <option>Obra</option>
+                  <option>Arrendamiento de inmuebles</option>
+                  <option>Consultoría</option>
+                  <option>Seguros</option>
+                </select>
+              </label>
+              <label class="md:col-span-2 space-y-1">
+                <span class="block font-label-caps text-slate-600">Categorias adicionales</span>
+                <input name="categorias_adicionales" class="w-full border-slate-200 focus:border-primary-container focus:ring-0 text-body-md rounded-lg" placeholder="Separadas por coma" type="text" />
+              </label>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="font-label-caps text-slate-400 border-l-4 border-primary pl-3">4. ASPECTOS FINANCIEROS</h3>
+            <label class="block space-y-1">
+              <span class="block font-label-caps text-slate-600">Precio base (COP)</span>
+              <span class="relative block">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 font-bold text-sm">$</span>
+                <input name="precio_base" required min="0" step="1" class="w-full border-slate-200 focus:border-primary-container focus:ring-0 text-body-md rounded-lg pl-8 font-data-mono" placeholder="0.00" type="number" />
+              </span>
+            </label>
+          </div>
+
+          <div class="pt-6 border-t border-slate-100 flex flex-col md:flex-row gap-4">
+            <button id="submit-button" class="flex-1 bg-[#1E293B] text-white py-3 px-6 rounded-lg font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-md active:scale-[0.98]" type="submit">
+              <span class="material-symbols-outlined">search_check</span>
+              <span id="submit-text">Predecir riesgo</span>
+            </button>
+            <button id="reset-button" class="px-6 py-3 border border-slate-200 text-slate-700 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-slate-50 transition-all" type="reset">
+              <span class="material-symbols-outlined">refresh</span>
+              Limpiar formulario
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="xl:col-span-4 xl:sticky xl:top-24">
+        <div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm">
+          <div id="result-header" class="p-6 bg-slate-50 border-b border-slate-100 transition-colors">
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <span id="result-badge" class="px-3 py-1 bg-slate-500 text-white text-[10px] font-bold uppercase tracking-widest rounded-full">Sin prediccion</span>
+                <h2 id="probability-value" class="text-4xl font-extrabold text-slate-700 mt-2 font-data-mono">--</h2>
+                <p id="probability-caption" class="font-label-caps text-slate-500 opacity-80">Probabilidad calculada</p>
+              </div>
+              <div id="result-icon-box" class="w-16 h-16 rounded-full border-4 border-slate-200 flex items-center justify-center">
+                <span id="result-icon" class="material-symbols-outlined text-slate-500 text-3xl">analytics</span>
+              </div>
+            </div>
+            <div id="result-label" class="bg-slate-700 text-white p-3 rounded text-center font-bold uppercase tracking-widest text-sm">
+              Esperando datos
+            </div>
+          </div>
+          <div class="p-6 space-y-6">
+            <div class="flex justify-between items-center text-body-sm pb-4 border-b border-slate-100">
+              <span class="text-slate-500">Umbral tecnico (Threshold)</span>
+              <span id="threshold-value" class="font-data-mono font-bold text-slate-900">0.645</span>
+            </div>
+            <div class="space-y-3">
+              <h4 class="font-label-caps text-slate-400">Factores de influencia clave</h4>
+              <div id="factor-list" class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-slate-100 text-slate-700 text-[11px] font-semibold border border-slate-200 rounded">Modalidad</span>
+                <span class="px-2 py-1 bg-slate-100 text-slate-700 text-[11px] font-semibold border border-slate-200 rounded">Justificacion</span>
+                <span class="px-2 py-1 bg-slate-100 text-slate-700 text-[11px] font-semibold border border-slate-200 rounded">Fase</span>
+                <span class="px-2 py-1 bg-slate-100 text-slate-700 text-[11px] font-semibold border border-slate-200 rounded">Categoria</span>
+                <span class="px-2 py-1 bg-slate-100 text-slate-700 text-[11px] font-semibold border border-slate-200 rounded">Precio</span>
+              </div>
+            </div>
+            <div class="p-4 bg-amber-50 border border-amber-100 rounded-lg flex gap-3">
+              <span class="material-symbols-outlined text-amber-600 text-lg">info</span>
+              <p class="text-xs text-amber-800 leading-relaxed italic">
+                Nota institucional: "La predicción prioriza señales tempranas; no reemplaza revisión jurídica ni auditoría".
+              </p>
+            </div>
+            <div class="pt-4">
+              <img class="w-full h-auto rounded border border-slate-200" alt="Dashboard de analisis de riesgos de contratacion publica" src="/static/secop-dashboard.png" onerror="this.closest('div').classList.add('hidden')" />
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 space-y-4">
+          <div class="p-4 border border-slate-200 rounded-lg bg-white flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-slate-100 rounded flex items-center justify-center">
+                <span class="material-symbols-outlined text-slate-500 text-sm">history</span>
+              </div>
+              <span class="text-xs font-bold text-slate-600">Ultimo analisis:</span>
+            </div>
+            <span id="last-analysis" class="text-xs font-data-mono text-slate-400">Sin ejecutar</span>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    const form = document.getElementById("prediction-form");
+    const formError = document.getElementById("form-error");
+    const submitButton = document.getElementById("submit-button");
+    const submitText = document.getElementById("submit-text");
+    const resultHeader = document.getElementById("result-header");
+    const resultBadge = document.getElementById("result-badge");
+    const probabilityValue = document.getElementById("probability-value");
+    const probabilityCaption = document.getElementById("probability-caption");
+    const resultIconBox = document.getElementById("result-icon-box");
+    const resultIcon = document.getElementById("result-icon");
+    const resultLabel = document.getElementById("result-label");
+    const factorList = document.getElementById("factor-list");
+    const lastAnalysis = document.getElementById("last-analysis");
+
+    const states = {
+      empty: {
+        header: "p-6 bg-slate-50 border-b border-slate-100 transition-colors",
+        badge: "px-3 py-1 bg-slate-500 text-white text-[10px] font-bold uppercase tracking-widest rounded-full",
+        score: "text-4xl font-extrabold text-slate-700 mt-2 font-data-mono",
+        iconBox: "w-16 h-16 rounded-full border-4 border-slate-200 flex items-center justify-center",
+        icon: "material-symbols-outlined text-slate-500 text-3xl",
+        label: "bg-slate-700 text-white p-3 rounded text-center font-bold uppercase tracking-widest text-sm",
+        iconName: "analytics"
+      },
+      high: {
+        header: "p-6 bg-error/5 border-b border-error/10 transition-colors",
+        badge: "px-3 py-1 bg-error text-white text-[10px] font-bold uppercase tracking-widest rounded-full",
+        score: "text-4xl font-extrabold text-error mt-2 font-data-mono",
+        iconBox: "w-16 h-16 rounded-full border-4 border-error/20 flex items-center justify-center",
+        icon: "material-symbols-outlined text-error text-3xl",
+        label: "bg-error text-white p-3 rounded text-center font-bold uppercase tracking-widest text-sm",
+        iconName: "warning"
+      },
+      review: {
+        header: "p-6 bg-amber-50 border-b border-amber-100 transition-colors",
+        badge: "px-3 py-1 bg-amber-600 text-white text-[10px] font-bold uppercase tracking-widest rounded-full",
+        score: "text-4xl font-extrabold text-amber-700 mt-2 font-data-mono",
+        iconBox: "w-16 h-16 rounded-full border-4 border-amber-200 flex items-center justify-center",
+        icon: "material-symbols-outlined text-amber-700 text-3xl",
+        label: "bg-amber-600 text-white p-3 rounded text-center font-bold uppercase tracking-widest text-sm",
+        iconName: "rule"
+      },
+      low: {
+        header: "p-6 bg-emerald-50 border-b border-emerald-100 transition-colors",
+        badge: "px-3 py-1 bg-emerald-700 text-white text-[10px] font-bold uppercase tracking-widest rounded-full",
+        score: "text-4xl font-extrabold text-emerald-700 mt-2 font-data-mono",
+        iconBox: "w-16 h-16 rounded-full border-4 border-emerald-200 flex items-center justify-center",
+        icon: "material-symbols-outlined text-emerald-700 text-3xl",
+        label: "bg-emerald-700 text-white p-3 rounded text-center font-bold uppercase tracking-widest text-sm",
+        iconName: "verified"
+      }
+    };
+
+    function setError(message) {
+      if (!message) {
+        formError.classList.add("hidden");
+        formError.textContent = "";
+        return;
+      }
+      formError.textContent = message;
+      formError.classList.remove("hidden");
+    }
+
+    function setLoading(isLoading) {
+      submitButton.disabled = isLoading;
+      submitButton.classList.toggle("opacity-70", isLoading);
+      submitButton.classList.toggle("cursor-not-allowed", isLoading);
+      submitText.textContent = isLoading ? "Calculando..." : "Predecir riesgo";
+      if (isLoading) {
+        probabilityValue.textContent = "...";
+        resultBadge.textContent = "Procesando";
+        resultLabel.textContent = "Ejecutando modelo";
+        probabilityCaption.textContent = "RandomForest early";
+      }
+    }
+
+    function applyState(stateName) {
+      const state = states[stateName] || states.empty;
+      resultHeader.className = state.header;
+      resultBadge.className = state.badge;
+      probabilityValue.className = state.score;
+      resultIconBox.className = state.iconBox;
+      resultIcon.className = state.icon;
+      resultIcon.textContent = state.iconName;
+      resultLabel.className = state.label;
+    }
+
+    function resetPanel() {
+      applyState("empty");
+      resultBadge.textContent = "Sin prediccion";
+      probabilityValue.textContent = "--";
+      probabilityCaption.textContent = "Probabilidad calculada";
+      resultLabel.textContent = "Esperando datos";
+      lastAnalysis.textContent = "Sin ejecutar";
+      setError("");
+    }
+
+    function renderFactors(factors) {
+      const fallback = ["Modalidad", "Justificacion", "Fase", "Categoria", "Precio"];
+      const labels = Array.isArray(factors) && factors.length ? factors.map((factor) => factor.label) : fallback;
+      factorList.innerHTML = labels.map((label) => (
+        `<span class="px-2 py-1 bg-slate-100 text-slate-700 text-[11px] font-semibold border border-slate-200 rounded">${label}</span>`
+      )).join("");
+    }
+
+    function renderResult(result) {
+      const probability = Number(result.probabilidad_riesgo);
+      const label = result.etiqueta || "Revisar";
+      const state = label === "Riesgo alto" ? "high" : label === "Riesgo bajo" ? "low" : "review";
+      applyState(state);
+      resultBadge.textContent = state === "high" ? "Alerta de Riesgo" : state === "low" ? "Riesgo Bajo" : "Revision Recomendada";
+      probabilityValue.textContent = `${Math.round(probability * 100)}%`;
+      probabilityCaption.textContent = "Probabilidad calculada";
+      resultLabel.textContent = label;
+      document.getElementById("threshold-value").textContent = Number(result.umbral || 0.645).toFixed(3);
+      renderFactors(result.factores_clave);
+      lastAnalysis.textContent = new Date().toLocaleTimeString("es-CO", { hour: "2-digit", minute: "2-digit" });
+    }
+
+    function payloadFromForm(formElement) {
+      const formData = new FormData(formElement);
+      return {
+        entidad: formData.get("entidad"),
+        nit_entidad: formData.get("nit_entidad"),
+        departamento_entidad: formData.get("departamento_entidad"),
+        ciudad_entidad: formData.get("ciudad_entidad"),
+        ordenentidad: formData.get("ordenentidad"),
+        nombre_del_procedimiento: formData.get("nombre_del_procedimiento"),
+        descripci_n_del_procedimiento: formData.get("descripci_n_del_procedimiento"),
+        fase: formData.get("fase"),
+        precio_base: Number(formData.get("precio_base")),
+        modalidad_de_contratacion: formData.get("modalidad_de_contratacion"),
+        justificaci_n_modalidad_de: formData.get("justificaci_n_modalidad_de"),
+        codigo_principal_de_categoria: formData.get("codigo_principal_de_categoria"),
+        tipo_de_contrato: formData.get("tipo_de_contrato"),
+        categorias_adicionales: formData.get("categorias_adicionales") || ""
+      };
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      setError("");
+      if (!form.reportValidity()) return;
+
+      const payload = payloadFromForm(form);
+      if (!Number.isFinite(payload.precio_base) || payload.precio_base < 0) {
+        setError("El precio base debe ser un numero mayor o igual a cero.");
+        return;
+      }
+
+      setLoading(true);
+      try {
+        const response = await fetch("/api/predict", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const result = await response.json();
+        if (!response.ok) {
+          const detail = Array.isArray(result.detail) ? "Revisa los campos obligatorios del formulario." : result.detail;
+          throw new Error(detail || "No se pudo calcular la prediccion.");
+        }
+        renderResult(result);
+      } catch (error) {
+        applyState("empty");
+        probabilityValue.textContent = "--";
+        resultBadge.textContent = "Error";
+        resultLabel.textContent = "No se pudo predecir";
+        setError(error.message || "No se pudo calcular la prediccion.");
+      } finally {
+        setLoading(false);
+      }
+    });
+
+    form.addEventListener("reset", () => {
+      setTimeout(resetPanel, 0);
+    });
+
+    resetPanel();
+  </script>
+</body>
+</html>
